@@ -4,7 +4,8 @@ $location = 'eastus'
 $cnd_file = "./output/cloud_network_domains.json"
 $cnd_data = Get-Content $cnd_file | ConvertFrom-JSON 
 
-
+## This script will assume each CND = ResourceGroup
+## Build Each CND as a Resource Group
 foreach ($itm in $cnd_data.data.network_domain){
 
     Write-host  "$($itm.Name)"
@@ -19,5 +20,8 @@ foreach ($itm in $cnd_data.data.network_domain){
     }else{
         Write-Host "`t[ $rgName] creating resource group" -ForegroundColor Green
         New-AzResourceGroup -Name $rgName -Location $location
-}
+    }
+
+    #Write-Host "Creating VNet [ $rgName]" -ForegroundColor Magenta
+
 }
