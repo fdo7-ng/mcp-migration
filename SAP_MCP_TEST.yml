@@ -31,18 +31,18 @@
       dest: ./output/cloud_network_domains.json
     delegate_to: localhost
 
-  - name: List Specific Cloud Network Domains
-    nttmcp.mcp.network_info:
-      # auth: "{{auth}}"
-      region: "{{ region }}"
-      datacenter: "{{ datacenter }}"
-      name: '{{ cnd }}'
-    register: output
-  - debug: var=output
-  - copy:
-      content: '{{output | to_nice_json }}'
-      dest: ./output/network_info.json
-    delegate_to: localhost
+  # - name: List Specific Cloud Network Domains
+  #   nttmcp.mcp.network_info:
+  #     # auth: "{{auth}}"
+  #     region: "{{ region }}"
+  #     datacenter: "{{ datacenter }}"
+  #     name: '{{ cnd }}'
+  #   register: output
+  # - debug: var=output
+  # - copy:
+  #     content: '{{output | to_nice_json }}'
+  #     dest: ./output/network_info.json
+  #   delegate_to: localhost
 
   - name: List all firewall rules within a Cloud Network Domain``
     nttmcp.mcp.firewall_info:
