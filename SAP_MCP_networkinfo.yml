@@ -146,9 +146,21 @@
       msg: "Network Domain Name:{{ item.name }}, datacenterid {{ item.datacenterId}}"
     with_items: "{{ network_domain_list }}"
 
-  - name: List all VLANS per Network Domain
-    include_tasks: vlan_listing_task.yml
+  # - name: List all VLANS per Network Domain
+  #   include_tasks: task_list_vlans.yml
+  #   with_items: "{{ network_domain_list }}"
+
+  # - name: List all Firewall Rules per Network Domain
+  #   include_tasks: task_list_firewall.yml
+  #   with_items: "{{ network_domain_list }}"
+
+  - name: List all Security Groups per Network Domain
+    include_tasks: task_list_secgroup.yml
     with_items: "{{ network_domain_list }}"
+
+
+
+
 
   # - name: List all VLANs per Network Domain
   #   block:
