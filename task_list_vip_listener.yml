@@ -1,0 +1,13 @@
+
+- name: List/Get VIP Virtual Listeners within a Cloud Network Domain``
+  nttmcp.mcp.vip_listener_info:
+    # auth: "{{auth}}"
+    region: "{{ region }}"
+    datacenter: "{{ datacenter }}"
+    network_domain: '{{ item.name }}'
+  register: output
+- debug: var=output
+- copy:
+    content: '{{output | to_nice_json }}'
+    dest: "./output/vip_listener_{{ item.name }}.json"
+  delegate_to: localhost

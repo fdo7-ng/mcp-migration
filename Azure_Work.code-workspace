@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../mcp_test"
+		},
+		{
+			"path": "../Azure_MultiTierApp"
+		},
+		{
+			"path": "../regression_testing"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

@@ -49,7 +49,7 @@ foreach ($vm in $server_list){
 
     }else{
         Write-Host " --- Creating network interface - " $vmNicName -ForegroundColor Yellow
-        $subnetID = (Get-AzureRmVirtualNetworkSubnetConfig -Name 'SAPDRSPOC_VLAN' -VirtualNetwork $vnet).id
+        $subnetID = (Get-AzureRmVirtualNetworkSubnetConfig -Name $vlanName -VirtualNetwork $vnet).id
 
         New-AzureRmNetworkInterface -Name $vmNicName -ResourceGroupName $resourcegroup -Location $location -SubnetId $subnetID -PrivateIpAddress $privateIpv4 | Out-Null
     }

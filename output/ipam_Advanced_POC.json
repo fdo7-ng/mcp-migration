@@ -1,0 +1,18 @@
+{
+    "changed": false,
+    "data": {
+        "count": 1,
+        "ipam": [
+            {
+                "baseIp": "165.180.38.34",
+                "createTime": "2020-05-19T17:44:56.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "id": "047f46f8-fc29-11e9-9f76-0050569a71d2",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "size": 2,
+                "state": "NORMAL"
+            }
+        ]
+    },
+    "failed": false
+}

@@ -1,0 +1,89 @@
+{
+    "changed": false,
+    "data": {
+        "count": 2,
+        "vip_pool": [
+            {
+                "createTime": "2020-06-18T07:20:19.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "",
+                "id": "9a63895b-4b86-4086-9bdf-2c97cf713f6a",
+                "loadBalanceMethod": "ROUND_ROBIN",
+                "members": [
+                    {
+                        "createTime": "2020-06-19T08:10:00.000Z",
+                        "id": "8c5e22f0-d2a5-429c-977b-9915c5e11651",
+                        "node": {
+                            "id": "b81ab384-551a-4e28-85a9-df491288cd1b",
+                            "ipAddress": "10.10.10.11",
+                            "name": "WebTier03",
+                            "status": "ENABLED"
+                        },
+                        "port": 80,
+                        "state": "NORMAL",
+                        "status": "ENABLED"
+                    },
+                    {
+                        "createTime": "2020-06-18T07:23:55.000Z",
+                        "id": "ceb2308b-155a-4e1b-824e-d4a73a7b7bbb",
+                        "node": {
+                            "id": "7b0e03f6-ea3c-45f5-b35e-9cdea63e9c71",
+                            "ipAddress": "10.10.10.12",
+                            "name": "WebTier04",
+                            "status": "ENABLED"
+                        },
+                        "port": 80,
+                        "state": "NORMAL",
+                        "status": "ENABLED"
+                    }
+                ],
+                "name": "Pool_no_cert",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "serviceDownAction": "NONE",
+                "slowRampTime": 10,
+                "state": "NORMAL"
+            },
+            {
+                "createTime": "2020-06-18T07:26:51.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "",
+                "id": "1284ebf3-4dc1-4fdd-8ef7-14fa33293e1c",
+                "loadBalanceMethod": "ROUND_ROBIN",
+                "members": [
+                    {
+                        "createTime": "2020-06-18T07:27:35.000Z",
+                        "id": "40355b6e-ddfc-431b-a308-5877ca841399",
+                        "node": {
+                            "id": "9342fc45-e61e-4e6d-bb69-3670afc0b3d1",
+                            "ipAddress": "10.10.10.6",
+                            "name": "WebTier01",
+                            "status": "ENABLED"
+                        },
+                        "port": 443,
+                        "state": "NORMAL",
+                        "status": "ENABLED"
+                    },
+                    {
+                        "createTime": "2020-06-18T07:27:36.000Z",
+                        "id": "66d15937-3bc1-4d44-951e-e1bbe20d901b",
+                        "node": {
+                            "id": "575c2ce7-8e93-47b8-ade6-890c1473e705",
+                            "ipAddress": "10.10.10.7",
+                            "name": "WebTier02",
+                            "status": "ENABLED"
+                        },
+                        "port": 443,
+                        "state": "NORMAL",
+                        "status": "ENABLED"
+                    }
+                ],
+                "name": "Pool_with_cert",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "serviceDownAction": "NONE",
+                "slowRampTime": 10,
+                "state": "NORMAL"
+            }
+        ]
+    },
+    "failed": false
+}

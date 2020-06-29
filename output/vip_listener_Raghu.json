@@ -1,0 +1,67 @@
+{
+    "changed": false,
+    "data": {
+        "count": 2,
+        "vip_listener": [
+            {
+                "connectionLimit": 100000,
+                "connectionRateLimit": 4000,
+                "createTime": "2020-06-18T07:26:29.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "",
+                "enabled": true,
+                "id": "3247a10e-e193-4c71-ab23-1fb5319f8b43",
+                "irule": [],
+                "listenerIpAddress": "165.180.38.35",
+                "listenerIpAddressability": "PUBLIC_IP_BLOCK",
+                "name": "VIP_without_cert",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "optimizationProfile": "TCP",
+                "pool": {
+                    "id": "1284ebf3-4dc1-4fdd-8ef7-14fa33293e1c",
+                    "loadBalanceMethod": "ROUND_ROBIN",
+                    "name": "Pool_with_cert",
+                    "serviceDownAction": "NONE",
+                    "slowRampTime": 10
+                },
+                "port": 443,
+                "protocol": "TCP",
+                "sourcePortPreservation": "PRESERVE",
+                "state": "NORMAL",
+                "type": "STANDARD"
+            },
+            {
+                "connectionLimit": 100000,
+                "connectionRateLimit": 4000,
+                "createTime": "2020-06-18T07:19:16.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "",
+                "enabled": true,
+                "id": "7fc6da19-3136-47e9-8b6e-234654b6f7bb",
+                "irule": [],
+                "listenerIpAddress": "165.180.38.34",
+                "listenerIpAddressability": "PUBLIC_IP_BLOCK",
+                "name": "VIP_with_cert",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "optimizationProfile": "TCP",
+                "pool": {
+                    "id": "9a63895b-4b86-4086-9bdf-2c97cf713f6a",
+                    "loadBalanceMethod": "ROUND_ROBIN",
+                    "name": "Pool_no_cert",
+                    "serviceDownAction": "NONE",
+                    "slowRampTime": 10
+                },
+                "port": 443,
+                "protocol": "TCP",
+                "sourcePortPreservation": "PRESERVE",
+                "sslOffloadProfile": {
+                    "id": "78268dc1-59fc-4f91-a2de-f410675acc89",
+                    "name": "NewSSL"
+                },
+                "state": "NORMAL",
+                "type": "STANDARD"
+            }
+        ]
+    },
+    "failed": false
+}

@@ -1,7 +1,7 @@
 {
     "changed": false,
     "data": {
-        "count": 8,
+        "count": 24,
         "server": [
             {
                 "cluster": {
@@ -9,613 +9,64 @@
                     "name": "SAP Cluster CL1 - App + NONPROD DB"
                 },
                 "cpu": {
-                    "coresPerSocket": 4,
+                    "coresPerSocket": 1,
                     "count": 4,
-                    "speed": "HIGHPERFORMANCE"
+                    "speed": "STANDARD"
                 },
-                "createTime": "2020-01-06T20:44:49.000Z",
+                "createTime": "2020-05-19T16:56:32.000Z",
                 "datacenterId": "GEN_SAP1_GEO1_3",
                 "deployed": true,
-                "description": "AD for SAP servers",
-                "drsEligible": {},
-                "floppy": [
-                    {
-                        "driveNumber": 0,
-                        "id": "7222c920-18a1-4be8-9a27-abdaad5b549c",
-                        "key": 8000,
-                        "state": "NORMAL"
-                    }
-                ],
+                "floppy": [],
                 "guest": {
                     "operatingSystem": {
-                        "displayName": "WIN2016S/64",
+                        "displayName": "WIN2019S/64",
                         "family": "WINDOWS",
-                        "id": "WIN2016S64",
+                        "id": "WIN2019S64",
                         "osUnitsGroupId": "WINDOWS_SERVER"
                     },
                     "osCustomization": true,
                     "vmTools": {
-                        "apiVersion": 10346,
+                        "apiVersion": 10305,
                         "runningStatus": "RUNNING",
                         "type": "VMWARE_TOOLS",
                         "versionStatus": "NEED_UPGRADE"
                     }
                 },
-                "id": "bc0b3e81-0fec-4616-9d53-0b416ba0a60b",
-                "ideController": [
-                    {
-                        "adapterType": "IDE",
-                        "channel": 0,
-                        "deviceOrDisk": [],
-                        "id": "44b13cbf-f2ab-45fd-805f-db17a48d7801",
-                        "key": 200,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "IDE",
-                        "channel": 1,
-                        "deviceOrDisk": [],
-                        "id": "175e0473-1f65-429e-a8e3-b1b50034f10f",
-                        "key": 201,
-                        "state": "NORMAL"
-                    }
-                ],
-                "memoryGb": 8,
-                "name": "sapad1",
+                "id": "96f37afb-8edc-46b9-bccd-79ebaddacf83",
+                "ideController": [],
+                "memoryGb": 16,
+                "name": "ad01",
                 "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                     "primaryNic": {
                         "connected": true,
-                        "id": "90c4a1b0-37c5-46ea-97cf-2202b349bd40",
-                        "ipv6": "2607:f480:9901:2252:6b47:c040:b10f:d91",
+                        "id": "16509078-fb52-4960-a2ec-fc1c144b8cfb",
+                        "ipv6": "2607:f480:9901:2268:3c48:bdb3:7587:c992",
                         "key": 4000,
-                        "macAddress": "00:50:56:9f:a9:1d",
+                        "macAddress": "00:50:56:9f:4f:7a",
                         "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.6",
+                        "privateIpv4": "10.10.13.10",
                         "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
                     }
                 },
-                "sataController": [
-                    {
-                        "adapterType": "AHCI",
-                        "busNumber": 0,
-                        "deviceOrDisk": [
-                            {
-                                "device": {
-                                    "id": "078d46c4-64d6-443c-91ea-10d037ad3ba8",
-                                    "sataId": 0,
-                                    "state": "NORMAL",
-                                    "type": "CDROM"
-                                }
-                            }
-                        ],
-                        "id": "75dfc518-f27f-4fb8-913b-45b98cff2071",
-                        "key": 15000,
-                        "state": "NORMAL"
-                    }
-                ],
+                "sataController": [],
                 "scsiController": [
                     {
                         "adapterType": "LSI_LOGIC_SAS",
                         "busNumber": 0,
                         "disk": [
                             {
-                                "id": "518bc6fc-edcd-4d0b-9766-3402abd0c673",
+                                "id": "7eca6be5-dfd0-4d2a-be79-66a30b179a4f",
                                 "scsiId": 0,
                                 "sizeGb": 50,
                                 "speed": "STANDARD",
                                 "state": "NORMAL"
-                            },
-                            {
-                                "id": "a75affdf-5dae-43fa-8551-fbe384d2564b",
-                                "scsiId": 1,
-                                "sizeGb": 100,
-                                "speed": "HIGHPERFORMANCE",
-                                "state": "NORMAL"
                             }
                         ],
-                        "id": "f2d4c5d3-3d86-4ad8-9358-ca8eea33e7fc",
+                        "id": "14f554f1-b958-4eba-8228-74374b3d5830",
                         "key": 1000,
-                        "state": "NORMAL"
-                    }
-                ],
-                "source": {
-                    "type": "IMAGE_ID",
-                    "value": "2733b3a9-0586-42c1-ad34-a68b3e4018a7"
-                },
-                "started": true,
-                "state": "NORMAL",
-                "tag": [],
-                "virtualHardware": {
-                    "upToDate": true,
-                    "version": "vmx-11"
-                }
-            },
-            {
-                "cluster": {
-                    "id": "GEN_SAP1_GEO1_3-01",
-                    "name": "SAP Cluster CL1 - App + NONPROD DB"
-                },
-                "cpu": {
-                    "coresPerSocket": 16,
-                    "count": 16,
-                    "speed": "HIGHPERFORMANCE"
-                },
-                "createTime": "2020-01-13T01:43:37.000Z",
-                "datacenterId": "GEN_SAP1_GEO1_3",
-                "deployed": true,
-                "description": "APP server for DRS POC testing",
-                "drsEligible": {},
-                "floppy": [
-                    {
-                        "driveNumber": 0,
-                        "id": "7d134b2e-8aca-4d92-ba57-071eb64d6c9f",
-                        "key": 8000,
-                        "state": "NORMAL"
-                    }
-                ],
-                "guest": {
-                    "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
-                        "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
-                    },
-                    "osCustomization": true,
-                    "vmTools": {
-                        "apiVersion": 11269,
-                        "runningStatus": "RUNNING",
-                        "type": "OPEN_VM_TOOLS",
-                        "versionStatus": "UNMANAGED"
-                    }
-                },
-                "id": "320957d2-a982-4490-87ae-a774f70de259",
-                "ideController": [
-                    {
-                        "adapterType": "IDE",
-                        "channel": 0,
-                        "deviceOrDisk": [],
-                        "id": "c6d4edc1-04c5-4fd0-bf37-300b612bb276",
-                        "key": 200,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "IDE",
-                        "channel": 1,
-                        "deviceOrDisk": [],
-                        "id": "f0718cdc-19f8-4a5d-98d1-5af0218f723c",
-                        "key": 201,
-                        "state": "NORMAL"
-                    }
-                ],
-                "memoryGb": 64,
-                "name": "cissapappdr1",
-                "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
-                    "primaryNic": {
-                        "connected": true,
-                        "id": "1978708a-ad58-46ae-81dc-2c7e4e5364b4",
-                        "ipv6": "2607:f480:9901:2252:1167:4c4d:5709:8523",
-                        "key": 4000,
-                        "macAddress": "00:50:56:9f:45:15",
-                        "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.8",
-                        "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
-                    }
-                },
-                "sataController": [
-                    {
-                        "adapterType": "AHCI",
-                        "busNumber": 0,
-                        "deviceOrDisk": [
-                            {
-                                "device": {
-                                    "id": "0d9206cc-f1f2-4fb9-b960-c4dba5d35f1b",
-                                    "sataId": 0,
-                                    "state": "NORMAL",
-                                    "type": "CDROM"
-                                }
-                            }
-                        ],
-                        "id": "1cd0141a-4930-41d4-8f5f-679dc33bfb28",
-                        "key": 15000,
-                        "state": "NORMAL"
-                    }
-                ],
-                "scsiController": [
-                    {
-                        "adapterType": "LSI_LOGIC_PARALLEL",
-                        "busNumber": 0,
-                        "disk": [
-                            {
-                                "id": "20483850-7dc3-4f40-95b5-f10487aa8ff6",
-                                "scsiId": 0,
-                                "sizeGb": 124,
-                                "speed": "HIGHPERFORMANCE",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "8d09b19f-e816-4e65-abbc-6832fec6a596",
-                        "key": 1000,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 1,
-                        "disk": [
-                            {
-                                "id": "f95926d5-288f-490a-8da7-1723cae9a434",
-                                "scsiId": 0,
-                                "sizeGb": 200,
-                                "speed": "HIGHPERFORMANCE",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "2c615ade-bc8e-48e5-8ef8-ac38bf652e94",
-                        "key": 1001,
-                        "state": "NORMAL"
-                    }
-                ],
-                "source": {
-                    "type": "IMAGE_ID",
-                    "value": "a5bd3967-6ec4-429d-b524-06ec2adfc455"
-                },
-                "started": true,
-                "state": "NORMAL",
-                "tag": [],
-                "virtualHardware": {
-                    "upToDate": true,
-                    "version": "vmx-11"
-                }
-            },
-            {
-                "cluster": {
-                    "id": "GEN_SAP1_GEO1_3-02",
-                    "name": "SAP Cluster CL5 - PROD DB"
-                },
-                "cpu": {
-                    "coresPerSocket": 1,
-                    "count": 18,
-                    "speed": "HIGHPERFORMANCE"
-                },
-                "createTime": "2020-02-11T21:30:26.000Z",
-                "datacenterId": "GEN_SAP1_GEO1_3",
-                "deployed": true,
-                "floppy": [],
-                "guest": {
-                    "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
-                        "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
-                    },
-                    "osCustomization": true,
-                    "vmTools": {
-                        "apiVersion": 11264,
-                        "runningStatus": "RUNNING",
-                        "type": "OPEN_VM_TOOLS",
-                        "versionStatus": "UNMANAGED"
-                    }
-                },
-                "id": "67cf5cea-2131-4a5f-bbf7-420072a7e04b",
-                "ideController": [],
-                "memoryGb": 128,
-                "name": "cissaphanadr2",
-                "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
-                    "primaryNic": {
-                        "connected": true,
-                        "id": "c0a97e9c-635d-4239-971b-6455ba5dfea0",
-                        "ipv6": "2607:f480:9901:2252:3649:594e:bea:115e",
-                        "key": 4000,
-                        "macAddress": "00:50:56:9f:b2:8e",
-                        "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.10",
-                        "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
-                    }
-                },
-                "sataController": [],
-                "scsiController": [
-                    {
-                        "adapterType": "LSI_LOGIC_PARALLEL",
-                        "busNumber": 0,
-                        "disk": [
-                            {
-                                "id": "7134aed6-573d-416c-9df8-b44eb9827d72",
-                                "scsiId": 0,
-                                "sizeGb": 80,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "bc7ca309-652d-412c-83e1-b6f67eb5e2ef",
-                        "key": 1000,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 1,
-                        "disk": [
-                            {
-                                "id": "ef91ea94-082f-4500-a8e3-89b6760711da",
-                                "scsiId": 0,
-                                "sizeGb": 150,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "bf426682-401a-4561-af65-840e0864084c",
-                        "key": 1001,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 2,
-                        "disk": [
-                            {
-                                "id": "7b38a031-9fd3-4e8b-87c5-0f6c3d3fc357",
-                                "scsiId": 0,
-                                "sizeGb": 192,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "2fbd1821-1174-4abe-9863-960e7de0b7e8",
-                        "key": 1002,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 3,
-                        "disk": [
-                            {
-                                "id": "0fa3caf8-6a8e-4c78-96bf-1d8bd584e29c",
-                                "scsiId": 0,
-                                "sizeGb": 128,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            },
-                            {
-                                "id": "5f29a611-8018-4519-abba-dcb7154b4073",
-                                "scsiId": 2,
-                                "sizeGb": 100,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "378c3c0b-fc5a-4a3b-af9c-b57716d9b8d2",
-                        "key": 1003,
-                        "state": "NORMAL"
-                    }
-                ],
-                "source": {
-                    "type": "IMAGE_ID",
-                    "value": "a5bd3967-6ec4-429d-b524-06ec2adfc455"
-                },
-                "started": true,
-                "state": "NORMAL",
-                "tag": [],
-                "virtualHardware": {
-                    "upToDate": true,
-                    "version": "vmx-11"
-                }
-            },
-            {
-                "cluster": {
-                    "id": "GEN_SAP1_GEO1_3-01",
-                    "name": "SAP Cluster CL1 - App + NONPROD DB"
-                },
-                "cpu": {
-                    "coresPerSocket": 16,
-                    "count": 16,
-                    "speed": "HIGHPERFORMANCE"
-                },
-                "createTime": "2020-03-23T20:04:14.000Z",
-                "datacenterId": "GEN_SAP1_GEO1_3",
-                "deployed": true,
-                "floppy": [],
-                "guest": {
-                    "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
-                        "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
-                    },
-                    "osCustomization": true,
-                    "vmTools": {
-                        "apiVersion": 11269,
-                        "runningStatus": "NOT_RUNNING",
-                        "type": "OPEN_VM_TOOLS",
-                        "versionStatus": "UNMANAGED"
-                    }
-                },
-                "id": "be144a28-7ee6-4edd-acc4-e1f7fcc30e12",
-                "ideController": [],
-                "memoryGb": 64,
-                "name": "test-mt3",
-                "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
-                    "primaryNic": {
-                        "connected": true,
-                        "id": "2828114d-bd78-454b-9bad-49b6214f7cc7",
-                        "ipv6": "2607:f480:9901:2252:fa4:131:ff35:36ac",
-                        "key": 4000,
-                        "macAddress": "00:50:56:9f:d7:34",
-                        "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.103",
-                        "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
-                    }
-                },
-                "progress": {
-                    "action": "CLONE_SERVER",
-                    "numberOfSteps": 9,
-                    "requestTime": "2020-03-23T21:30:30.000Z",
-                    "step": {
-                        "name": "WAIT_FOR_CLONE_IMAGE_TASK",
-                        "number": 9,
-                        "percentComplete": 41
-                    },
-                    "updateTime": "2020-03-23T21:32:00.000Z",
-                    "userName": "mtayyab-tdi"
-                },
-                "sataController": [],
-                "scsiController": [
-                    {
-                        "adapterType": "LSI_LOGIC_PARALLEL",
-                        "busNumber": 0,
-                        "disk": [
-                            {
-                                "id": "db58d8b9-81d5-4ef4-a497-a6c65ad86a52",
-                                "scsiId": 0,
-                                "sizeGb": 80,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "5f186f1f-df17-45e1-8069-3c5ffa17a6a5",
-                        "key": 1000,
-                        "state": "NORMAL"
-                    }
-                ],
-                "source": {
-                    "type": "IMAGE_ID",
-                    "value": "a5bd3967-6ec4-429d-b524-06ec2adfc455"
-                },
-                "started": false,
-                "state": "PENDING_CHANGE",
-                "tag": [],
-                "virtualHardware": {
-                    "upToDate": true,
-                    "version": "vmx-11"
-                }
-            },
-            {
-                "cluster": {
-                    "id": "GEN_SAP1_GEO1_3-02",
-                    "name": "SAP Cluster CL5 - PROD DB"
-                },
-                "cpu": {
-                    "coresPerSocket": 1,
-                    "count": 16,
-                    "speed": "HIGHPERFORMANCE"
-                },
-                "createTime": "2020-04-06T20:43:02.000Z",
-                "datacenterId": "GEN_SAP1_GEO1_3",
-                "deployed": true,
-                "floppy": [],
-                "guest": {
-                    "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
-                        "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
-                    },
-                    "osCustomization": true,
-                    "vmTools": {
-                        "apiVersion": 2147483647,
-                        "runningStatus": "RUNNING",
-                        "type": "OPEN_VM_TOOLS",
-                        "versionStatus": "UNMANAGED"
-                    }
-                },
-                "id": "b7626b2a-60ef-4804-9ceb-f1307d164637",
-                "ideController": [],
-                "memoryGb": 128,
-                "name": "cissaphanadr3",
-                "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
-                    "primaryNic": {
-                        "connected": true,
-                        "id": "d864ce70-cee5-4841-acdb-1a3b90abef61",
-                        "ipv6": "2607:f480:9901:2252:2736:de07:f6e8:6e9c",
-                        "key": 4000,
-                        "macAddress": "00:50:56:9f:99:24",
-                        "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.9",
-                        "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
-                    }
-                },
-                "sataController": [],
-                "scsiController": [
-                    {
-                        "adapterType": "LSI_LOGIC_PARALLEL",
-                        "busNumber": 0,
-                        "disk": [
-                            {
-                                "id": "170cde3b-7f98-4812-99af-e1011068e2f7",
-                                "scsiId": 0,
-                                "sizeGb": 80,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "dbececbb-90a6-4e50-8237-bd7d2f7f4ce9",
-                        "key": 1000,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 1,
-                        "disk": [
-                            {
-                                "id": "f97cbe4d-ec9d-4c6e-84e9-3a2d48007a27",
-                                "scsiId": 0,
-                                "sizeGb": 128,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "b7d5e6a2-0d27-40c4-a94d-173af9395bc8",
-                        "key": 1001,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 2,
-                        "disk": [
-                            {
-                                "id": "c699b71e-e4bf-4997-9706-632635a2b34c",
-                                "scsiId": 0,
-                                "sizeGb": 128,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "8416482c-1efc-48e9-9745-bcf1811eb925",
-                        "key": 1002,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 3,
-                        "disk": [
-                            {
-                                "id": "980c5ea0-56e4-495d-953d-7561c81d5642",
-                                "scsiId": 0,
-                                "sizeGb": 150,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            },
-                            {
-                                "id": "c3cc86d3-6049-457a-9b06-05c29f179e22",
-                                "scsiId": 1,
-                                "sizeGb": 100,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "331b8df9-5be9-4d2a-ae13-9060d0699b4d",
-                        "key": 1003,
                         "state": "NORMAL"
                     }
                 ],
@@ -626,9 +77,194 @@
                 },
                 "source": {
                     "type": "IMAGE_ID",
-                    "value": "a5bd3967-6ec4-429d-b524-06ec2adfc455"
+                    "value": "2baf82b2-405f-4461-8caa-9e3bc55f169a"
                 },
                 "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-13"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-05-19T16:57:20.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2019S/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2019S64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10305,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "a7b2f2a6-f7fd-46e3-8f30-5a093b17b7b2",
+                "ideController": [],
+                "memoryGb": 16,
+                "name": "ad02",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "02a95f5b-e174-45ac-8d94-a679404644e8",
+                        "ipv6": "2607:f480:9901:2268:6a51:da6f:b900:3691",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:89:a7",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.13.11",
+                        "state": "NORMAL",
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "28237eaa-b3dd-4f29-ac75-330202249b73",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "88cceee1-9040-497c-aa85-6e3e28c7cd0d",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "2baf82b2-405f-4461-8caa-9e3bc55f169a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-13"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-05-19T18:07:58.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "This VM will be used to perform test.",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2012R2S/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2012R2S64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "NOT_RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "d1865b94-1d99-4d55-a6e9-fe690fb75692",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "Multiple_NIC",
+                "networkInfo": {
+                    "additionalNic": [
+                        {
+                            "connected": true,
+                            "id": "208ad6b3-fbac-4e07-a7e2-b4babd465a6c",
+                            "ipv6": "2607:f480:9901:2267:29fe:fece:80d3:f86c",
+                            "key": 4001,
+                            "macAddress": "00:50:56:9f:7d:ba",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.12.15",
+                            "state": "NORMAL",
+                            "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                            "vlanName": "DB_Tier_VLAN"
+                        },
+                        {
+                            "connected": true,
+                            "id": "4ae4f2c8-8c87-453b-9b64-43e11267ffd5",
+                            "ipv6": "2607:f480:9901:2265:a51:528:b0f6:f45c",
+                            "key": 4002,
+                            "macAddress": "00:50:56:9f:e1:e2",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.10.10",
+                            "state": "NORMAL",
+                            "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                            "vlanName": "Web_Tier_VLAN"
+                        }
+                    ],
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "55d609ac-4fb6-43cc-b7fd-dc39c9945d8d",
+                        "ipv6": "2607:f480:9901:2266:1187:71e8:5f3a:fad0",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:3c:49",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.11.8",
+                        "state": "NORMAL",
+                        "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                        "vlanName": "App_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "24afad11-401c-4fb7-9286-940f79ff311f",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "4cbda738-ff14-4d6a-8d2c-6524104ed60a",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "fb6a7ba6-7a35-427b-9054-bb8cf5cabe61"
+                },
+                "started": false,
                 "state": "NORMAL",
                 "tag": [],
                 "virtualHardware": {
@@ -638,122 +274,75 @@
             },
             {
                 "cluster": {
-                    "id": "GEN_SAP1_GEO1_3-02",
-                    "name": "SAP Cluster CL5 - PROD DB"
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
                 },
                 "cpu": {
-                    "coresPerSocket": 16,
-                    "count": 16,
-                    "speed": "HIGHPERFORMANCE"
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
                 },
-                "createTime": "2020-04-06T20:49:18.000Z",
+                "createTime": "2020-06-04T15:45:44.000Z",
                 "datacenterId": "GEN_SAP1_GEO1_3",
                 "deployed": true,
+                "description": "This VM is being used for demo do not delete this.",
                 "floppy": [],
                 "guest": {
                     "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
+                        "displayName": "REDHAT7/64",
                         "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
                     },
                     "osCustomization": true,
                     "vmTools": {
-                        "apiVersion": 2147483647,
+                        "apiVersion": 10246,
                         "runningStatus": "RUNNING",
-                        "type": "OPEN_VM_TOOLS",
-                        "versionStatus": "UNMANAGED"
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
                     }
                 },
-                "id": "d7605dbe-798d-438c-9c84-a1fa85d267c1",
+                "id": "cc360d6d-4d77-4a82-adf3-3a710e9d5125",
                 "ideController": [],
-                "memoryGb": 128,
-                "name": "cissaphanadr1",
+                "memoryGb": 4,
+                "name": "WebTier01",
                 "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                     "primaryNic": {
                         "connected": true,
-                        "id": "8350750c-2aa5-4c9f-8ded-2ab9183c96b6",
-                        "ipv6": "2607:f480:9901:2252:6e11:9cb4:4431:7f79",
+                        "id": "038ce9fe-b197-4bb8-9896-af2af9dfd4f9",
+                        "ipv6": "2607:f480:9901:2265:69d:3cc8:8c37:3467",
                         "key": 4000,
-                        "macAddress": "00:50:56:9f:a8:cc",
+                        "macAddress": "00:50:56:9f:f5:2a",
                         "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.7",
+                        "privateIpv4": "10.10.10.6",
                         "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
+                        "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                        "vlanName": "Web_Tier_VLAN"
                     }
                 },
                 "sataController": [],
                 "scsiController": [
                     {
-                        "adapterType": "LSI_LOGIC_PARALLEL",
+                        "adapterType": "VMWARE_PARAVIRTUAL",
                         "busNumber": 0,
                         "disk": [
                             {
-                                "id": "7cee2707-ccb2-4eab-8046-89a106b73607",
+                                "id": "34cc6445-8034-453b-866d-edbe2da66de6",
                                 "scsiId": 0,
-                                "sizeGb": 80,
+                                "sizeGb": 20,
                                 "speed": "STANDARD",
                                 "state": "NORMAL"
                             }
                         ],
-                        "id": "9ddefdf4-0d13-4d18-9acf-46dad5138923",
+                        "id": "41f74932-e2fb-4188-ac50-56746f9046d4",
                         "key": 1000,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 1,
-                        "disk": [
-                            {
-                                "id": "9430398e-0e38-430c-8816-1bc7a97f1090",
-                                "scsiId": 0,
-                                "sizeGb": 128,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "76276876-c613-488e-be6c-e8969217cef7",
-                        "key": 1001,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 2,
-                        "disk": [
-                            {
-                                "id": "c1414e97-a807-4644-ba01-ba8d207a8371",
-                                "scsiId": 0,
-                                "sizeGb": 128,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "2117a41b-04ce-4bb4-b5ed-6e5923957a5e",
-                        "key": 1002,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 3,
-                        "disk": [
-                            {
-                                "id": "642a6776-c030-446e-88d2-c69d57926602",
-                                "scsiId": 0,
-                                "sizeGb": 150,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "a0d2309c-fddd-4dc6-ad62-3ec57bbc54ba",
-                        "key": 1003,
                         "state": "NORMAL"
                     }
                 ],
                 "source": {
                     "type": "IMAGE_ID",
-                    "value": "a5bd3967-6ec4-429d-b524-06ec2adfc455"
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
                 },
                 "started": true,
                 "state": "NORMAL",
@@ -769,70 +358,70 @@
                     "name": "SAP Cluster CL1 - App + NONPROD DB"
                 },
                 "cpu": {
-                    "coresPerSocket": 16,
-                    "count": 16,
-                    "speed": "HIGHPERFORMANCE"
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
                 },
-                "createTime": "2020-04-07T17:22:59.000Z",
+                "createTime": "2020-06-04T15:46:30.000Z",
                 "datacenterId": "GEN_SAP1_GEO1_3",
                 "deployed": true,
                 "floppy": [],
                 "guest": {
                     "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
+                        "displayName": "REDHAT7/64",
                         "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
                     },
                     "osCustomization": true,
                     "vmTools": {
-                        "apiVersion": 11269,
+                        "apiVersion": 10246,
                         "runningStatus": "RUNNING",
-                        "type": "OPEN_VM_TOOLS",
-                        "versionStatus": "UNMANAGED"
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
                     }
                 },
-                "id": "3b087bac-9404-4561-a21a-85d139ed8282",
+                "id": "a045ebeb-c817-4d21-b29a-37e482d9af74",
                 "ideController": [],
-                "memoryGb": 64,
-                "name": "cissapapptest01",
+                "memoryGb": 4,
+                "name": "WebTier02",
                 "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                     "primaryNic": {
                         "connected": true,
-                        "id": "26406cd3-628f-40c4-8242-d13cb6e5333a",
-                        "ipv6": "2607:f480:9901:2252:9cc:4575:1424:7d7e",
+                        "id": "63cf5b69-1837-4388-88db-44f2b7b42992",
+                        "ipv6": "2607:f480:9901:2265:f71:3f64:f5b2:30d7",
                         "key": 4000,
-                        "macAddress": "00:50:56:9f:cd:40",
+                        "macAddress": "00:50:56:9f:6c:9f",
                         "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.11",
+                        "privateIpv4": "10.10.10.7",
                         "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
+                        "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                        "vlanName": "Web_Tier_VLAN"
                     }
                 },
                 "sataController": [],
                 "scsiController": [
                     {
-                        "adapterType": "LSI_LOGIC_PARALLEL",
+                        "adapterType": "VMWARE_PARAVIRTUAL",
                         "busNumber": 0,
                         "disk": [
                             {
-                                "id": "104932d8-bf3e-4081-8320-517f4aecef9f",
+                                "id": "8a305ba3-c627-4c36-9482-7f20078313db",
                                 "scsiId": 0,
-                                "sizeGb": 80,
+                                "sizeGb": 20,
                                 "speed": "STANDARD",
                                 "state": "NORMAL"
                             }
                         ],
-                        "id": "a4efa9eb-e36d-468d-baed-4abacc7fda63",
+                        "id": "4b65e69a-f5a7-484d-9713-2826a22dd0f9",
                         "key": 1000,
                         "state": "NORMAL"
                     }
                 ],
                 "source": {
                     "type": "IMAGE_ID",
-                    "value": "a5bd3967-6ec4-429d-b524-06ec2adfc455"
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
                 },
                 "started": true,
                 "state": "NORMAL",
@@ -844,50 +433,50 @@
             },
             {
                 "cluster": {
-                    "id": "GEN_SAP1_GEO1_3-02",
-                    "name": "SAP Cluster CL5 - PROD DB"
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
                 },
                 "cpu": {
-                    "coresPerSocket": 16,
-                    "count": 16,
-                    "speed": "HIGHPERFORMANCE"
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
                 },
-                "createTime": "2020-04-15T00:18:38.000Z",
+                "createTime": "2020-06-04T15:47:31.000Z",
                 "datacenterId": "GEN_SAP1_GEO1_3",
                 "deployed": true,
                 "floppy": [],
                 "guest": {
                     "operatingSystem": {
-                        "displayName": "SUSE12SAP/64",
+                        "displayName": "UBUNTU12/64",
                         "family": "UNIX",
-                        "id": "SUSE12SAP64",
-                        "osUnitsGroupId": "SUSE_SAP"
+                        "id": "UBUNTU1264",
+                        "osUnitsGroupId": "CANONICAL"
                     },
                     "osCustomization": true,
                     "vmTools": {
-                        "apiVersion": 10346,
+                        "apiVersion": 10305,
                         "runningStatus": "RUNNING",
                         "type": "VMWARE_TOOLS",
                         "versionStatus": "NEED_UPGRADE"
                     }
                 },
-                "id": "01fb905c-48d0-41c3-94d0-9b2b7f463892",
+                "id": "fc36d3c2-b340-4c00-bc81-9111f901419a",
                 "ideController": [],
-                "memoryGb": 128,
-                "name": "cissaphanadr4",
+                "memoryGb": 8,
+                "name": "WebTier01_OLD",
                 "networkInfo": {
-                    "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                     "primaryNic": {
                         "connected": true,
-                        "id": "616908dd-87db-4681-99a6-f0cef209aa8d",
-                        "ipv6": "2607:f480:9901:2252:701:b3ac:fd38:b29f",
+                        "id": "a6ab4537-bc89-4579-a3e0-1f0610943c49",
+                        "ipv6": "2607:f480:9901:2265:4d89:3338:e4e6:f2f4",
                         "key": 4000,
-                        "macAddress": "00:50:56:9f:bf:4d",
+                        "macAddress": "00:50:56:9f:ad:00",
                         "networkAdapter": "VMXNET3",
-                        "privateIpv4": "10.0.0.12",
+                        "privateIpv4": "10.10.10.8",
                         "state": "NORMAL",
-                        "vlanId": "884a4118-14e6-43a2-9aef-40ef1ba89f86",
-                        "vlanName": "SAPDRSPOC_VLAN"
+                        "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                        "vlanName": "Web_Tier_VLAN"
                     }
                 },
                 "sataController": [],
@@ -897,61 +486,1688 @@
                         "busNumber": 0,
                         "disk": [
                             {
-                                "id": "62d81cc0-4fcc-4c0e-907f-0438576ab4c5",
+                                "id": "51950851-a1d7-46cc-bb65-4354a1d76628",
                                 "scsiId": 0,
-                                "sizeGb": 80,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "b1a036d4-6f5d-4de7-9653-ffdd3daed186",
+                                "scsiId": 1,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "b6f0e558-f610-40e6-b28d-4dc21f589fdf",
+                                "scsiId": 2,
+                                "sizeGb": 10,
                                 "speed": "STANDARD",
                                 "state": "NORMAL"
                             }
                         ],
-                        "id": "ca01215a-f472-4ca5-87ad-e67205ad0251",
+                        "id": "e495b466-f74b-42e4-baf9-2d89467cde68",
                         "key": 1000,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 1,
-                        "disk": [
-                            {
-                                "id": "38e13a30-3b17-4d60-851e-3f9a5cf4b2ae",
-                                "scsiId": 0,
-                                "sizeGb": 156,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "aa9c12cc-7dc5-409d-931c-8c8df10592fe",
-                        "key": 1001,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 2,
-                        "disk": [
-                            {
-                                "id": "7da3ba42-33a6-4396-b148-3f099ae2c7ba",
-                                "scsiId": 0,
-                                "sizeGb": 156,
-                                "speed": "STANDARD",
-                                "state": "NORMAL"
-                            }
-                        ],
-                        "id": "635a3a24-0128-4243-b63c-1fc48da14126",
-                        "key": 1002,
-                        "state": "NORMAL"
-                    },
-                    {
-                        "adapterType": "VMWARE_PARAVIRTUAL",
-                        "busNumber": 3,
-                        "disk": [],
-                        "id": "17b71b19-225e-4416-8b8a-829f806a47e3",
-                        "key": 1003,
                         "state": "NORMAL"
                     }
                 ],
                 "source": {
                     "type": "IMAGE_ID",
-                    "value": "08e3287b-8ba2-4222-9d29-a6f7fb24bc1b"
+                    "value": "1a03f284-2aa6-4661-97c3-34ddee258876"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-10"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-04T15:48:37.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2019S/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2019S64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10305,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "596d7c49-fa45-4205-bf1e-8260a018ac87",
+                "ideController": [],
+                "memoryGb": 4,
+                "name": "AppTier01",
+                "networkInfo": {
+                    "additionalNic": [
+                        {
+                            "connected": true,
+                            "id": "71f924c1-7efa-43f5-9264-d2f30f6bdec3",
+                            "ipv6": "2607:f480:9901:2267:501c:8460:8fb:e368",
+                            "key": 4001,
+                            "macAddress": "00:50:56:9f:33:88",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.12.10",
+                            "state": "NORMAL",
+                            "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                            "vlanName": "DB_Tier_VLAN"
+                        }
+                    ],
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "b2072449-929c-4e4b-8833-080bb52724e4",
+                        "ipv6": "2607:f480:9901:2266:4769:23e3:8112:782",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:e0:b1",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.11.6",
+                        "state": "NORMAL",
+                        "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                        "vlanName": "App_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "eb22826e-8bd2-45b2-9cca-25bc4db40e13",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "03158a57-7d22-4624-aea5-861b57e7f996",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "snapshotService": {
+                    "manualSnapshotInProgress": false,
+                    "servicePlan": "ONE_MONTH",
+                    "state": "NORMAL"
+                },
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "2baf82b2-405f-4461-8caa-9e3bc55f169a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-13"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-04T15:49:25.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2019S/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2019S64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10305,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "3d76f13b-5e6d-4bb8-87ff-3bda72c09dda",
+                "ideController": [],
+                "memoryGb": 4,
+                "name": "AppTier02",
+                "networkInfo": {
+                    "additionalNic": [
+                        {
+                            "connected": true,
+                            "id": "e66d7023-4b9b-44b5-b2be-1e8abcc01b29",
+                            "ipv6": "2607:f480:9901:2267:6a5e:3ffc:ecf4:f6ab",
+                            "key": 4001,
+                            "macAddress": "00:50:56:9f:57:27",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.12.11",
+                            "state": "NORMAL",
+                            "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                            "vlanName": "DB_Tier_VLAN"
+                        }
+                    ],
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "5050ec14-9d6b-4d8d-bfc3-3e08f442e537",
+                        "ipv6": "2607:f480:9901:2266:432d:c5b8:7db8:e0af",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:ab:fb",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.11.7",
+                        "state": "NORMAL",
+                        "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                        "vlanName": "App_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "7298879a-4291-46a1-b868-ca2643d0ab9b",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "0a4e5430-8704-483c-b5e5-7665d81b2d1e",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "snapshotService": {
+                    "manualSnapshotInProgress": false,
+                    "servicePlan": "ONE_MONTH",
+                    "state": "NORMAL"
+                },
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "2baf82b2-405f-4461-8caa-9e3bc55f169a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-13"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 16,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-04T15:51:26.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "4341f24b-849a-4214-9cdb-2b555ff4a37b",
+                "ideController": [],
+                "memoryGb": 32,
+                "name": "DBTier01",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "f3df4dcd-d295-419b-9d20-cdcdfae5a865",
+                        "ipv6": "2607:f480:9901:2267:49d4:c543:4ac9:eb23",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:0d:3d",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.12.6",
+                        "state": "NORMAL",
+                        "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                        "vlanName": "DB_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "0f1f4fde-de3a-42ae-95e6-dd2e5ab19715",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "13b68bb0-0b5a-4d32-8a94-84460e31b09a",
+                                "iops": 900,
+                                "scsiId": 1,
+                                "sizeGb": 100,
+                                "speed": "PROVISIONEDIOPS",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "52d0752e-52d7-4424-a7c0-210c6df8728c",
+                                "scsiId": 2,
+                                "sizeGb": 100,
+                                "speed": "HIGHPERFORMANCE",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "0bc5bb12-b3d8-44e6-9a37-44e49098ee4d",
+                                "iops": 900,
+                                "scsiId": 3,
+                                "sizeGb": 100,
+                                "speed": "PROVISIONEDIOPS",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "30b1c510-2d6b-441d-a550-797255100e1a",
+                                "scsiId": 4,
+                                "sizeGb": 500,
+                                "speed": "HIGHPERFORMANCE",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "142eb8c7-e9be-4b45-af47-4257d5439d8d",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 16,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-04T15:52:16.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "758dc801-ce5e-406b-ade2-bb2e73a01ea5",
+                "ideController": [],
+                "memoryGb": 32,
+                "name": "DBTier02",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "898cb41b-746a-48ca-acf0-c076d4bf92bc",
+                        "ipv6": "2607:f480:9901:2267:343a:1eb:3deb:913c",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:08:9d",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.12.7",
+                        "state": "NORMAL",
+                        "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                        "vlanName": "DB_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "47151bb5-b61d-4133-a9f5-a2937cc98332",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "be3662e0-71df-4359-9596-f92d2b709285",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 8,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-04T15:53:52.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": false,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT5/64",
+                        "family": "UNIX",
+                        "id": "REDHAT564",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true
+                },
+                "id": "c6ae92a6-35a6-4af4-bced-4d0b8f38a3cc",
+                "ideController": [],
+                "memoryGb": 16,
+                "name": "DBTier_OLD01",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "e0c4e5ea-9c08-4257-8966-51150c2244ba",
+                        "ipv6": "2607:f480:9901:2267:374a:74a5:228e:c4ab",
+                        "key": 4000,
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.12.8",
+                        "state": "FAILED_ADD",
+                        "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                        "vlanName": "DB_Tier_VLAN"
+                    }
+                },
+                "progress": {
+                    "action": "DEPLOY_SERVER",
+                    "failureReason": "Maximum wait for guest os NIC for vm id vm-5376 has expired, but the IP address is not correct or the NIC is not connected.",
+                    "numberOfSteps": 25,
+                    "requestTime": "2020-06-04T15:53:52.000Z",
+                    "step": {
+                        "name": "WAIT_FOR_GUEST_IP_ADDRESS",
+                        "number": 22
+                    },
+                    "updateTime": "2020-06-04T16:58:00.000Z",
+                    "userName": "mike-lazuli"
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_PARALLEL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "3e3069f4-d1a3-417a-a85c-cf37aeadbeef",
+                                "scsiId": 0,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "PENDING_ADD"
+                            }
+                        ],
+                        "id": "8dcea01d-97a5-4337-a4ab-435c28ee842f",
+                        "key": 1000,
+                        "state": "PENDING_ADD"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "5655a261-5504-4720-8d25-92f27b3a5e50"
+                },
+                "started": true,
+                "state": "FAILED_ADD",
+                "tag": []
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 8,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-04T15:54:56.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT5/32",
+                        "family": "UNIX",
+                        "id": "REDHAT532",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10279,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "746c9f29-98f2-417d-b55f-f5966bb2e419",
+                "ideController": [],
+                "memoryGb": 16,
+                "name": "DBTier_OLD02",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "7f2db3a3-e06d-43b2-9e3e-6611928fa7f7",
+                        "ipv6": "2607:f480:9901:2267:1dd3:fc78:ad1f:6272",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:35:dc",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.12.9",
+                        "state": "NORMAL",
+                        "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                        "vlanName": "DB_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_PARALLEL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "84d43836-eeed-4e99-9272-42fc73646856",
+                                "scsiId": 0,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "3eadd6b0-c70b-484a-9f95-71b1c83dac02",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "b600059a-8f0f-4ba2-af53-1226d3adbbe1"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-13"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-06T07:37:35.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "This VM is being used for demo do not delete this.",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "OTHERLINUX/64",
+                        "family": "UNIX",
+                        "id": "OTHERLINUX64",
+                        "osUnitsGroupId": "GENERAL"
+                    },
+                    "osCustomization": false,
+                    "vmTools": {
+                        "apiVersion": 2147483647,
+                        "runningStatus": "RUNNING",
+                        "type": "OPEN_VM_TOOLS",
+                        "versionStatus": "UNMANAGED"
+                    }
+                },
+                "id": "ad0b8f10-934c-4696-8b19-621eacba360d",
+                "ideController": [],
+                "memoryGb": 4,
+                "name": "Network_Appliance_F5",
+                "networkInfo": {
+                    "additionalNic": [
+                        {
+                            "connected": true,
+                            "id": "5497d19a-bd70-4ca4-ba19-e35f60e059d4",
+                            "ipv6": "2607:f480:9901:2266:131f:8447:6ae8:2f90",
+                            "key": 4001,
+                            "macAddress": "00:50:56:9f:dd:f8",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.11.14",
+                            "state": "NORMAL",
+                            "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                            "vlanName": "App_Tier_VLAN"
+                        },
+                        {
+                            "connected": true,
+                            "id": "f4453e03-a3a6-4146-905b-eb28397697be",
+                            "ipv6": "2607:f480:9901:2267:705c:7925:f882:78dd",
+                            "key": 4002,
+                            "macAddress": "00:50:56:9f:77:fd",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.12.12",
+                            "state": "NORMAL",
+                            "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                            "vlanName": "DB_Tier_VLAN"
+                        },
+                        {
+                            "connected": true,
+                            "id": "cf9aa255-c144-429d-a0f3-3fdfdc74b489",
+                            "ipv6": "2607:f480:9901:2263:48a5:2aa4:3d0f:cfce",
+                            "key": 4003,
+                            "macAddress": "00:50:56:9f:32:13",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "172.16.0.6",
+                            "state": "NORMAL",
+                            "vlanId": "ff44cc81-2091-4f78-ae1f-bfb933291b3a",
+                            "vlanName": "Test_VLAN"
+                        }
+                    ],
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "cb6f24f7-7e5c-4b02-aa49-c8d509c8adb8",
+                        "ipv6": "2607:f480:9901:2268:2337:f679:2419:b861",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:16:bf",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.13.6",
+                        "state": "NORMAL",
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_PARALLEL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "33d5568c-ba9d-48d1-82ac-d101b32b0217",
+                                "scsiId": 0,
+                                "sizeGb": 126,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "d1915ce6-41d5-4781-8921-1d77006dfb6a",
+                                "scsiId": 1,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "26617c59-bed0-4238-9191-465a48e92d02",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "ec5a8740-62f6-4188-a6b2-45539a765c7f"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-09"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-06T09:15:10.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "This server is being used for demo. Please do not delete.",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2016S/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2016S64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "c47f5e98-c6e3-41b1-beb7-f37dab300659",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "Multiple_Disk",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "28e84cf5-28eb-4e95-8dc5-1c05a4fc3947",
+                        "ipv6": "2607:f480:9901:2268:4c41:f2af:d700:d531",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:4f:d3",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.13.7",
+                        "state": "NORMAL",
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "2c5090ac-56f0-4468-bf1d-3d065811a96b",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "221b357b-ab8c-49e3-bf50-e36ae685e218",
+                                "scsiId": 1,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "d125e29b-06bc-44a8-bfb4-ec2cbda909c8",
+                                "scsiId": 2,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "8cbbfebd-e543-4f16-8069-cd37d2c36d66",
+                                "scsiId": 3,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "c161810c-f2f4-4df0-b8fd-81b7c537d025",
+                                "scsiId": 4,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "3c5afb6d-65b5-47d6-8691-9206ebd4796d",
+                                "scsiId": 5,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "846607a9-4c02-4a37-9755-25897427dfd3",
+                                "scsiId": 6,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "320a1a80-3e69-432c-98c7-5410eda755e9",
+                                "scsiId": 8,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "0d484abc-b0dd-40e0-a428-2cc1582dff61",
+                                "scsiId": 9,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "16c886b8-7248-465e-aa2c-73f236454ee3",
+                                "scsiId": 10,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "5e8a7fb9-9849-4c74-92c8-101845e0ab62",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "c996b3b7-42af-4d51-bf53-ce40cbe9a41f"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 1,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-06T09:21:18.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "This VM is being used for demo do not delete this.",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "OTHERLINUX/64",
+                        "family": "UNIX",
+                        "id": "OTHERLINUX64",
+                        "osUnitsGroupId": "GENERAL"
+                    },
+                    "osCustomization": false,
+                    "vmTools": {
+                        "apiVersion": 2147483647,
+                        "runningStatus": "RUNNING",
+                        "type": "OPEN_VM_TOOLS",
+                        "versionStatus": "UNMANAGED"
+                    }
+                },
+                "id": "6548e276-a3d3-486c-b3d9-d257bb12523d",
+                "ideController": [],
+                "memoryGb": 4,
+                "name": "Network_Appliance_CSR",
+                "networkInfo": {
+                    "additionalNic": [
+                        {
+                            "connected": true,
+                            "id": "75b08afe-c1e8-464a-8fdb-739fc0d41cc2",
+                            "ipv6": "2607:f480:9901:2266:162b:9e8c:fa2b:8493",
+                            "key": 4001,
+                            "macAddress": "00:50:56:9f:5a:d9",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.11.15",
+                            "state": "NORMAL",
+                            "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                            "vlanName": "App_Tier_VLAN"
+                        },
+                        {
+                            "connected": true,
+                            "id": "fec14b2a-f3a4-4126-adcd-8c21036bcec6",
+                            "ipv6": "2607:f480:9901:2267:1494:15fb:40b8:3bb4",
+                            "key": 4002,
+                            "macAddress": "00:50:56:9f:df:3c",
+                            "networkAdapter": "VMXNET3",
+                            "privateIpv4": "10.10.12.13",
+                            "state": "NORMAL",
+                            "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                            "vlanName": "DB_Tier_VLAN"
+                        }
+                    ],
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "fa98c41c-5db3-4111-bd6a-d311d67d7ab2",
+                        "ipv6": "2607:f480:9901:2268:128a:34cf:6c9e:e7e2",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:17:5a",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.13.8",
+                        "state": "NORMAL",
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "05c0a592-33b7-4e1c-b42c-82cb46472fa0",
+                                "scsiId": 0,
+                                "sizeGb": 8,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "17bdce7f-b5ea-4ec1-8caf-23425de2d047",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "f88cd96a-f643-4a5b-bb92-c3c192aee4fd"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-10"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-06T09:22:03.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "This VM is being used for demo do not delete this.",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "OTHERLINUX/64",
+                        "family": "UNIX",
+                        "id": "OTHERLINUX64",
+                        "osUnitsGroupId": "GENERAL"
+                    },
+                    "osCustomization": false,
+                    "vmTools": {
+                        "apiVersion": 2147483647,
+                        "runningStatus": "RUNNING",
+                        "type": "OPEN_VM_TOOLS",
+                        "versionStatus": "UNMANAGED"
+                    }
+                },
+                "id": "1eab345b-7b77-4dc3-95ac-821c0a523271",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "Network_Appliance_Firepower",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "4d8a093b-9e29-46ec-a368-1998f011787e",
+                        "ipv6": "2607:f480:9901:2268:3741:3a2b:56f1:84db",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:44:fe",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.13.9",
+                        "state": "NORMAL",
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "94216db8-c2db-43bc-a9c4-8453e2aeea39",
+                                "scsiId": 0,
+                                "sizeGb": 250,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "1cc77c7c-5f99-401b-afc5-8faf9b7ebce5",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "cf4276f8-8046-4774-a0e6-f14c0d1c6a28"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-07"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 8,
+                    "count": 8,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-07T09:36:44.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "description": "TEST LVM; This VM will be  used for Demo. Please do not delete this.",
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "CENTOS7/64",
+                        "family": "UNIX",
+                        "id": "CENTOS764",
+                        "osUnitsGroupId": "CENTOS"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "c987b844-4728-4bf2-8d0f-894c2f95e5a7",
+                "ideController": [],
+                "memoryGb": 16,
+                "name": "LVM_Test",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "0e7c1c89-2587-4da6-82de-51f380a916e9",
+                        "ipv6": "2607:f480:9901:2265:e80:8778:34a7:f36e",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:9e:08",
+                        "networkAdapter": "E1000",
+                        "privateIpv4": "10.10.10.9",
+                        "state": "NORMAL",
+                        "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                        "vlanName": "Web_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_PARALLEL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "5ccac91c-31dc-4fed-8755-a3507c5d75de",
+                                "scsiId": 0,
+                                "sizeGb": 10,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "b3f80393-b5dd-4444-9140-1d8cf5203aad",
+                                "scsiId": 1,
+                                "sizeGb": 20,
+                                "speed": "HIGHPERFORMANCE",
+                                "state": "NORMAL"
+                            },
+                            {
+                                "id": "21baa5fc-3db0-4511-8dd2-3ffcb40f64d4",
+                                "scsiId": 2,
+                                "sizeGb": 30,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "e8e846aa-c70a-4a2a-91b6-ca58ab7da417",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "e5b0ae76-6afa-41ab-b00b-0c9c1cb1109e"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-10T08:46:06.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2016S/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2016S64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "NOT_RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "a99bd36b-2c1b-4a2e-8995-0674c3f956e3",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "Snapshot-Testing",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "d42d6970-c0d4-4730-a707-d72278e0fb34",
+                        "ipv6": "2607:f480:9901:2266:2b1d:5e6d:3650:40cc",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:bb:df",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.11.16",
+                        "state": "NORMAL",
+                        "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                        "vlanName": "App_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "3769b75f-7232-42d8-b5ca-9a51016c4f85",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "0173c172-4458-4587-8d3c-8b8a0af98f16",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "snapshotService": {
+                    "manualSnapshotInProgress": false,
+                    "servicePlan": "ONE_MONTH",
+                    "state": "NORMAL"
+                },
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "2733b3a9-0586-42c1-ad34-a68b3e4018a7"
+                },
+                "started": false,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-11T09:48:16.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "NOT_RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "4c93edba-c53a-4adc-85ce-a0d96463efe7",
+                "ideController": [],
+                "memoryGb": 4,
+                "name": "mysqldemo",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "6edd02ec-b54c-4bc5-8752-46d10ac67e39",
+                        "ipv6": "2607:f480:9901:2267:b98:e191:3d29:ffdb",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:d5:dc",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.12.14",
+                        "state": "NORMAL",
+                        "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                        "vlanName": "DB_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "bb1d1aea-0c22-41a3-8289-cca72e5a9ead",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "a93cddbb-979e-42ab-8a28-55f207c10b50",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
+                },
+                "started": false,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 2,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-12T15:50:15.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "NOT_RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "64e42259-6100-4bbd-9a02-6e9bf1bea6cc",
+                "ideController": [],
+                "memoryGb": 4,
+                "name": "power_off",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "073063db-7537-4f1d-b015-d33171792dd2",
+                        "ipv6": "2607:f480:9901:2268:a8:a9ce:5f71:827",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:22:6a",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.13.12",
+                        "state": "NORMAL",
+                        "vlanId": "e2f1eaae-76b7-45af-9ae2-84a0f89f01bf",
+                        "vlanName": "AD_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "ba8168a1-b196-4946-aeb5-32d74e391f94",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "bc6922d3-de0a-4ec7-b887-1bf1c5e4f3ba",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
+                },
+                "started": false,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-17T05:28:10.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "WIN2016DC/64",
+                        "family": "WINDOWS",
+                        "id": "WIN2016DC64",
+                        "osUnitsGroupId": "WINDOWS_SERVER"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10279,
+                        "runningStatus": "NOT_RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "1687c57a-4546-4c50-badd-24de973a28ef",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "mssqldemo",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "5637ed60-8e1b-4ca2-a134-44849cd76a9e",
+                        "ipv6": "2607:f480:9901:2267:4b7a:df59:8b67:34eb",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:8e:0e",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.12.17",
+                        "state": "NORMAL",
+                        "vlanId": "5241031e-4879-4d84-be5a-033bafe010da",
+                        "vlanName": "DB_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "LSI_LOGIC_SAS",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "4702b13b-d890-458b-b32e-18f8df03b766",
+                                "scsiId": 0,
+                                "sizeGb": 50,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "e3e702f3-795c-453d-999b-1cac825ef0e4",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "softwareLabel": [
+                    "MSSQL2017S"
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "19162188-8384-4362-b0d7-6aae7b4c6f42"
+                },
+                "started": false,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-17T09:17:36.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "b8df9f65-c727-4fce-b644-70b9e62815cc",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "AppTier03",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "f6a5c3c9-47d2-4289-b5f8-2235eec2265f",
+                        "ipv6": "2607:f480:9901:2266:563b:4ace:b22d:b124",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:20:76",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.11.9",
+                        "state": "NORMAL",
+                        "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255",
+                        "vlanName": "App_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "2e446d88-f59e-4b50-bc54-b162fc8f0e31",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "b3a27090-5a74-41d7-abc0-195c606c49f8",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-17T16:03:52.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "3d8ecea6-83b0-4656-85d6-e9306e4dba8d",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "WebTier03",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "7f4b5538-0132-4914-a9ac-91f71c692185",
+                        "ipv6": "2607:f480:9901:2265:3b07:8cc7:af:7a76",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:16:47",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.10.11",
+                        "state": "NORMAL",
+                        "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                        "vlanName": "Web_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "2e9d85ac-3215-40c8-85d7-c503a0d55920",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "a40abf49-43c4-4a76-a74d-a532cd260cc1",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
+                },
+                "started": true,
+                "state": "NORMAL",
+                "tag": [],
+                "virtualHardware": {
+                    "upToDate": true,
+                    "version": "vmx-11"
+                }
+            },
+            {
+                "cluster": {
+                    "id": "GEN_SAP1_GEO1_3-01",
+                    "name": "SAP Cluster CL1 - App + NONPROD DB"
+                },
+                "cpu": {
+                    "coresPerSocket": 1,
+                    "count": 4,
+                    "speed": "STANDARD"
+                },
+                "createTime": "2020-06-17T16:04:46.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "deployed": true,
+                "floppy": [],
+                "guest": {
+                    "operatingSystem": {
+                        "displayName": "REDHAT7/64",
+                        "family": "UNIX",
+                        "id": "REDHAT764",
+                        "osUnitsGroupId": "REDHAT"
+                    },
+                    "osCustomization": true,
+                    "vmTools": {
+                        "apiVersion": 10246,
+                        "runningStatus": "RUNNING",
+                        "type": "VMWARE_TOOLS",
+                        "versionStatus": "NEED_UPGRADE"
+                    }
+                },
+                "id": "3d0b1bae-8e03-4b2b-bca3-d456563c1797",
+                "ideController": [],
+                "memoryGb": 8,
+                "name": "WebTier04",
+                "networkInfo": {
+                    "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                    "primaryNic": {
+                        "connected": true,
+                        "id": "c4b1d5b9-cf45-4890-8d78-85dbf0bad099",
+                        "ipv6": "2607:f480:9901:2265:713b:edb4:c1d3:edb",
+                        "key": 4000,
+                        "macAddress": "00:50:56:9f:97:d9",
+                        "networkAdapter": "VMXNET3",
+                        "privateIpv4": "10.10.10.12",
+                        "state": "NORMAL",
+                        "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50",
+                        "vlanName": "Web_Tier_VLAN"
+                    }
+                },
+                "sataController": [],
+                "scsiController": [
+                    {
+                        "adapterType": "VMWARE_PARAVIRTUAL",
+                        "busNumber": 0,
+                        "disk": [
+                            {
+                                "id": "415b1051-6201-4c75-86fb-a5d991b2b6cc",
+                                "scsiId": 0,
+                                "sizeGb": 20,
+                                "speed": "STANDARD",
+                                "state": "NORMAL"
+                            }
+                        ],
+                        "id": "5ea4dc07-3a4b-457b-bc42-203ed60427b5",
+                        "key": 1000,
+                        "state": "NORMAL"
+                    }
+                ],
+                "source": {
+                    "type": "IMAGE_ID",
+                    "value": "75dad6a1-5942-440c-8ea6-97ddd6651c9a"
                 },
                 "started": true,
                 "state": "NORMAL",

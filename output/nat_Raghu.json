@@ -2,7 +2,7 @@
     "changed": false,
     "data": {
         "count": 0,
-        "security_group": []
+        "nat": []
     },
     "failed": false
 }

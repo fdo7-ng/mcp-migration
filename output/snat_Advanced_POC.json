@@ -1,0 +1,42 @@
+{
+    "changed": false,
+    "data": {
+        "count": 3,
+        "snat": [
+            {
+                "createTime": "2020-05-13T14:23:28.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "Prevents traffic destined for this range from having the Network Domain SNAT applied",
+                "destinationIpv4NetworkAddress": "10.0.0.0",
+                "destinationIpv4PrefixSize": 8,
+                "id": "9cd9517a-9832-4304-9884-7b847e89d176",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "state": "NORMAL",
+                "type": "SYSTEM"
+            },
+            {
+                "createTime": "2020-05-13T14:23:28.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "Prevents traffic destined for this range from having the Network Domain SNAT applied",
+                "destinationIpv4NetworkAddress": "172.16.0.0",
+                "destinationIpv4PrefixSize": 12,
+                "id": "d03bd6ca-67a8-4630-8ffa-5df3db8f6b7f",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "state": "NORMAL",
+                "type": "SYSTEM"
+            },
+            {
+                "createTime": "2020-05-13T14:23:28.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "description": "Prevents traffic destined for this range from having the Network Domain SNAT applied",
+                "destinationIpv4NetworkAddress": "192.168.0.0",
+                "destinationIpv4PrefixSize": 16,
+                "id": "09daa8fb-f8b4-4f2e-8e41-ee7823fd9f72",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "state": "NORMAL",
+                "type": "SYSTEM"
+            }
+        ]
+    },
+    "failed": false
+}

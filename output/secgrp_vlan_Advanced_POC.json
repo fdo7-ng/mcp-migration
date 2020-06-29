@@ -11,22 +11,22 @@
                 "nics": {
                     "nic": [
                         {
-                            "id": "0d91e6b2-faef-49d0-b94c-e93e8f7f92c5",
+                            "id": "5050ec14-9d6b-4d8d-bfc3-3e08f442e537",
                             "ipv4Address": "10.10.11.7",
-                            "ipv6Address": "2607:f480:9901:2266:5aa9:2c30:c898:1863",
+                            "ipv6Address": "2607:f480:9901:2266:432d:c5b8:7db8:e0af",
                             "primary": true,
                             "server": {
-                                "id": "cda11378-9b13-44db-961f-e3da35a5ef27",
+                                "id": "3d76f13b-5e6d-4bb8-87ff-3bda72c09dda",
                                 "name": "AppTier02"
                             }
                         },
                         {
-                            "id": "dabf8e6e-3817-4ffd-9907-047f4bc43990",
+                            "id": "b2072449-929c-4e4b-8833-080bb52724e4",
                             "ipv4Address": "10.10.11.6",
-                            "ipv6Address": "2607:f480:9901:2266:44cc:6d47:64b5:5c48",
+                            "ipv6Address": "2607:f480:9901:2266:4769:23e3:8112:782",
                             "primary": true,
                             "server": {
-                                "id": "86c9038d-2bcc-4c22-a2d9-65def40eb187",
+                                "id": "596d7c49-fa45-4205-bf1e-8260a018ac87",
                                 "name": "AppTier01"
                             }
                         }
@@ -44,23 +44,43 @@
                 "nics": {
                     "nic": [
                         {
-                            "id": "9e91f530-1e35-4173-9e7e-510abf928b5f",
-                            "ipv4Address": "10.10.12.6",
-                            "ipv6Address": "2607:f480:9901:2267:38d1:160:4767:d0a",
-                            "primary": true,
+                            "id": "71f924c1-7efa-43f5-9264-d2f30f6bdec3",
+                            "ipv4Address": "10.10.12.10",
+                            "ipv6Address": "2607:f480:9901:2267:501c:8460:8fb:e368",
+                            "primary": false,
                             "server": {
-                                "id": "1343f3c1-f07e-4f09-ab96-d4113792c9bf",
-                                "name": "DBTier01"
+                                "id": "596d7c49-fa45-4205-bf1e-8260a018ac87",
+                                "name": "AppTier01"
                             }
                         },
                         {
-                            "id": "e3957d65-9bec-4522-b251-09efa6b8f28a",
+                            "id": "898cb41b-746a-48ca-acf0-c076d4bf92bc",
                             "ipv4Address": "10.10.12.7",
-                            "ipv6Address": "2607:f480:9901:2267:7380:6fcd:3b37:412f",
+                            "ipv6Address": "2607:f480:9901:2267:343a:1eb:3deb:913c",
                             "primary": true,
                             "server": {
-                                "id": "c08c1d9e-e782-4b1a-8522-be3afc194aa9",
+                                "id": "758dc801-ce5e-406b-ade2-bb2e73a01ea5",
                                 "name": "DBTier02"
+                            }
+                        },
+                        {
+                            "id": "e66d7023-4b9b-44b5-b2be-1e8abcc01b29",
+                            "ipv4Address": "10.10.12.11",
+                            "ipv6Address": "2607:f480:9901:2267:6a5e:3ffc:ecf4:f6ab",
+                            "primary": false,
+                            "server": {
+                                "id": "3d76f13b-5e6d-4bb8-87ff-3bda72c09dda",
+                                "name": "AppTier02"
+                            }
+                        },
+                        {
+                            "id": "f3df4dcd-d295-419b-9d20-cdcdfae5a865",
+                            "ipv4Address": "10.10.12.6",
+                            "ipv6Address": "2607:f480:9901:2267:49d4:c543:4ac9:eb23",
+                            "primary": true,
+                            "server": {
+                                "id": "4341f24b-849a-4214-9cdb-2b555ff4a37b",
+                                "name": "DBTier01"
                             }
                         }
                     ],
@@ -77,23 +97,23 @@
                 "nics": {
                     "nic": [
                         {
-                            "id": "32bdd9ac-0d06-4b29-9928-b75f566cb95d",
-                            "ipv4Address": "10.10.10.7",
-                            "ipv6Address": "2607:f480:9901:2265:26cc:afe5:c246:bbe7",
+                            "id": "038ce9fe-b197-4bb8-9896-af2af9dfd4f9",
+                            "ipv4Address": "10.10.10.6",
+                            "ipv6Address": "2607:f480:9901:2265:69d:3cc8:8c37:3467",
                             "primary": true,
                             "server": {
-                                "id": "f5b1a533-225f-4e0c-8f33-fc8f2d89ceb3",
-                                "name": "WebTier02"
+                                "id": "cc360d6d-4d77-4a82-adf3-3a710e9d5125",
+                                "name": "WebTier01"
                             }
                         },
                         {
-                            "id": "590355b1-f813-486f-9031-478fe9a2d220",
-                            "ipv4Address": "10.10.10.6",
-                            "ipv6Address": "2607:f480:9901:2265:4bc2:5eed:7f65:1c87",
+                            "id": "63cf5b69-1837-4388-88db-44f2b7b42992",
+                            "ipv4Address": "10.10.10.7",
+                            "ipv6Address": "2607:f480:9901:2265:f71:3f64:f5b2:30d7",
                             "primary": true,
                             "server": {
-                                "id": "195799ab-8eec-43d5-a2f5-707b311d1a2c",
-                                "name": "WebTier01"
+                                "id": "a045ebeb-c817-4d21-b29a-37e482d9af74",
+                                "name": "WebTier02"
                             }
                         }
                     ],

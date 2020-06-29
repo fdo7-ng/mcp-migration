@@ -10,7 +10,8 @@
   connection: local
   gather_facts: no
   vars:
-    cnd: 'SAPDRS_POC'
+    # cnd: 'SAPDRS_POC'
+    cnd: 'Advanced_POC'
     region: 'na'
     datacenter: 'GEN_SAP1_GEO1_3'
     # auth:
@@ -25,23 +26,31 @@
       region: "{{ region }}"
       datacenter: "{{ datacenter }}"
     register: output
+    tags:
+    - init
   # - debug: var=output.data.network_domain
   - set_fact:
       network_domain_list: "{{ output.data.network_domain }}"
+    tags:
+    - init
   
   - name: Network Domain List
     debug: var=network_domain_list
+    tags:
+    - init
 
   - name: Loop thru Domain List
     debug:
       msg: "Network Domain Name:{{ item.name }}, datacenterid {{ item.datacenterId}}"
     with_items: "{{ network_domain_list }}"
-
-
-  # - copy:
-  #     content: '{{output | to_nice_json }}'
-  #     dest: ./output/cloud_network_domains.json
-  #   delegate_to: localhost
+    tags:
+    - init
+  - copy:
+      content: '{{output | to_nice_json }}'
+      dest: ./output/cloud_network_domains.json
+    delegate_to: localhost
+    tags:
+    - init
 
   # - name: List Specific Cloud Network Domains
   #   nttmcp.mcp.network_info:
@@ -141,6 +150,145 @@
   #   delegate_to: localhost
 
 
+  - name: Nat Info Block
+    block:
+    - name: List nat info within a Cloud Network Domain
+      nttmcp.mcp.nat_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/nat_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+  - name: VIP Virtual Listener Info Block
+    block:
+    - name: List virtual listener info within a Cloud Network Domain
+      nttmcp.mcp.vip_listener_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/vip_listener_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+  - name: VIP SSL Info Block
+    block:
+    - name: List virtual listener SSL info within a Cloud Network Domain
+      nttmcp.mcp.vip_ssl_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/vip_ssl_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+  - name: VIP pool Info Block
+    block:
+    - name: List virtual pool info within a Cloud Network Domain
+      nttmcp.mcp.vip_pool_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/vip_pool_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+  - name: SNAT Info Block
+    block:
+    - name: List SNAT info within a Cloud Network Domain
+      nttmcp.mcp.snat_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/snat_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+
+  - name: Static Route Info Block
+    block:
+    - name: List Static Route info within a Cloud Network Domain
+      nttmcp.mcp.static_route_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/static_route_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+  - name: Ipam Info Block
+    block:
+    - name: List IPAM info within a Cloud Network Domain
+      nttmcp.mcp.ipam_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/ipam_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+  - name: Server AntiAfinity Info Block
+    block:
+    - name: List Anti Affinity info within a Cloud Network Domain
+      nttmcp.mcp.ipam_info:
+        # auth: "{{auth}}"
+        region: "{{ region }}"
+        datacenter: "{{ datacenter }}"
+        network_domain: '{{ cnd }}'
+      register: output
+    - debug: var=output
+    - copy:
+        content: '{{output | to_nice_json }}'
+        dest: "./output/anti_affinity_{{ cnd }}.json"
+      delegate_to: localhost
+    tags:
+    - manual
+
+##### Task List Loops
+
   - name: Loop thru Domain List
     debug:
       msg: "Network Domain Name:{{ item.name }}, datacenterid {{ item.datacenterId}}"
@@ -150,17 +298,34 @@
   #   include_tasks: task_list_vlans.yml
   #   with_items: "{{ network_domain_list }}"
 
-  # - name: List all Firewall Rules per Network Domain
-  #   include_tasks: task_list_firewall.yml
-  #   with_items: "{{ network_domain_list }}"
+  - name: List all Firewall Rules per Network Domain
+    include_tasks: task_list_firewall.yml
+    with_items: "{{ network_domain_list }}"
+    tags:
+    - firewall 
+    - all
 
   - name: List all Security Groups per Network Domain
     include_tasks: task_list_secgroup.yml
     with_items: "{{ network_domain_list }}"
+    tags:
+    - secgroup 
+    - all
 
 
+  - name: List all Nat Info per Network Domain
+    include_tasks: task_list_nat.yml
+    with_items: "{{ network_domain_list }}"
+    tags:
+    - nat
+    - all
 
-
+  - name: List all Vip Listener Info per Network Domain
+    include_tasks: task_list_vip_listener.yml
+    with_items: "{{ network_domain_list }}"
+    tags:
+    - viplistener
+    - all
 
   # - name: List all VLANs per Network Domain
   #   block:
