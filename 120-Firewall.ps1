@@ -49,12 +49,14 @@ foreach ($fw in ($fw_data.data.acl| ?{$_.name -notlike "CCDEFAULT.*"}) ){
     $tmp_obj.properties.priority = $index
     $tmp_obj.properties.description = $fw.name
     $tmp_obj.properties.protocol = $fw.protocol
+    $tmp_obj.properties.access = Get-FwAction -Action $fw.action 
     
     $index +=10
 
     $obj_list += $tmp_obj
 }
 
+$obj_list
 
 
 $ip_file = './output/ip_list.json'
@@ -66,5 +68,12 @@ $ip_list = $ip_data.data.ip_list
 # Testing IP LIST
 foreach ($fw in ($fw_data.data.acl | ? { $_.name -notlike "CCDEFAULT.*" }) ) {
 
-    
+    Write-Host $fw.Name 
+    if(isIPAddressList( $fw.destination)){
+        $fw.destination.name
+    }
 }
+
+
+$iplist1= Get-IPAddressListObj -ip_list $ip_list -name "google_list"
+Get-IPAddressList -ip_list $iplist1
