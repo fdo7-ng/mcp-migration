@@ -1,13 +1,22 @@
-$fw_file = './output/firewall_Advanced_POC.json'
-$fw_data = Get-Content $fw_file -ErrorAction SilentlyContinue | ConvertFrom-JSON 
-$fw_data.data.acl
+$VerbosePreference = "Continue"
+
+Write-Verbose "Start Script"
+
+# $fw_file = './output/firewall_Advanced_POC.json'
+# $fw_data = Get-Content $fw_file -ErrorAction SilentlyContinue | ConvertFrom-JSON 
+# $fw_data.data.acl
 
 
+# $ip_file = './output/ip_list.json'
+# $ip_data = Get-Content $ip_file -ErrorAction SilentlyContinue | ConvertFrom-JSON 
+# $ip_list = $ip_data.data.ip_list
 
-$ip_file = './output/ip_list.json'
-$ip_data = Get-Content $ip_file -ErrorAction SilentlyContinue | ConvertFrom-JSON 
-$ip_list = $ip_data.data.ip_list
 
+$json_file = "./output/custard.json"
+$json_data = Get-Content $json_file -ErrorAction SilentlyContinue | ConvertFrom-JSON 
+
+$firewallRules = $json_data.networkDomain.firewallRule
+$ipAddressList = $json_data.networkDomain.ipAddressList
 # Create NSG OBJECT
 $nsg_props = [ordered]@{
     "name" = ""
@@ -46,9 +55,9 @@ $nsg_props = [ordered]@{
 $obj_list = @()
 $index = 100
 ## Skip all CCDEFAULT rules
-foreach ($fw in ($fw_data.data.acl| ?{$_.name -notlike "CCDEFAULT.*"}) ){
+foreach ($fw in ( $firewallRules[0..50] | ? { $_.name -notlike "CCDEFAULT.*" }) ){
 
-    Write-Host $index "-- " $fw.name 
+    Write-Verbose "$index --  $($fw.name)" 
     $tmp_obj = New-Object psobject -Property $nsg_props
     $tmp_obj.properties = New-Object psobject -Property $nsg_props.properties
     $tmp_obj.name = $fw.name
@@ -61,12 +70,13 @@ foreach ($fw in ($fw_data.data.acl| ?{$_.name -notlike "CCDEFAULT.*"}) ){
     #Processing Source/Destination
 
     if(isIPAddressList( $fw.source)){
-        Write-Host "[Source] -- Found IP Address List -- [ $($fw.source.ipAddressList.Name) ]" -ForegroundColor Yellow
-        $ip_obj = Get-IPAddressListObj -ip_list $ip_list -name $fw.source.ipAddressList.Name
+        Write-Verbose "[Source] -- Found IP Address List -- [ $($fw.source.ipAddressList.Name) ]" 
+        # $ip_obj = Get-IPAddressListObj -ip_list $ipAddressList  -name $fw.source.ipAddressList.Name
+        $ip_obj = Get-IPAddressListObj -ip_list $ipAddressList  -id $fw.source.ipAddressList.id
         $tmp_obj.properties.sourceAddressPrefix = Get-IPAddressList -ipAddressObj $ip_obj
         
     }elseif( $fw.source.ip.address -eq "ANY" )  {
-        Write-Host "[Source] -- IP is ANY " -ForegroundColor Green
+        Write-Verbose "[Source] -- IP is ANY "
         $tmp_obj.properties.sourceAddressPrefix = "*"
     }else{
         $tmp_obj.properties.sourceAddressPrefix = $fw.source.ip.address
@@ -74,14 +84,16 @@ foreach ($fw in ($fw_data.data.acl| ?{$_.name -notlike "CCDEFAULT.*"}) ){
     }
 
     if(isIPAddressList( $fw.destination)){
-        Write-Host "[Destination] -- Found IP Address List -- [ $($fw.destination.ipAddressList.Name) ]" -ForegroundColor Yellow
-        $ip_obj = Get-IPAddressListObj -ip_list $ip_list -name $fw.destination.ipAddressList.Name
+        Write-Verbose "[Destination] -- Found IP Address List -- [ $($fw.destination.ipAddressList.Name) ]"
+        # $ip_obj = Get-IPAddressListObj -ip_list $ipAddressList  -name $fw.destination.ipAddressList.Name
+        $ip_obj = Get-IPAddressListObj -ip_list $ipAddressList  -id $fw.destination.ipAddressList.id
+
         $tmp_obj.properties.destinationAddressPrefix = Get-IPAddressList -ipAddressObj $ip_obj 
     }elseif( $fw.destination.ip.address -eq "ANY" )  {
-        Write-Host "[Destination] -- IP is ANY " -ForegroundColor Green
+        Write-Verbose "[Destination] -- IP is ANY "
         $tmp_obj.properties.destinationAddressPrefix = "*"
     }else{
-        Write-Host "[Destination] -- IP is $($fw.destination.ip.address) " -ForegroundColor Green
+        Write-Verbose "[Destination] -- IP is $($fw.destination.ip.address) " 
         $tmp_obj.properties.destinationAddressPrefix = $fw.destination.ip.address
     }
 
