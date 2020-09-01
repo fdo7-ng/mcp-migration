@@ -123,4 +123,4 @@ Function isIPAddressList($obj){
 
 
 
-Export-ModuleMember -Function "Get-IPAddressListObj"
+Export-Module -Function "Get-IPAddressListObj"
