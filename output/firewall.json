@@ -14,10 +14,10 @@
                     }
                 },
                 "enabled": true,
-                "id": "ec005f33-466b-4898-bae0-b3547d963f27",
+                "id": "dd23b182-7c0d-4547-b4fa-7ad909c2ab74",
                 "ipVersion": "IPV4",
                 "name": "CCDEFAULT.BlockOutboundMailIPv4",
-                "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                 "protocol": "TCP",
                 "ruleType": "DEFAULT_RULE",
                 "source": {
@@ -39,10 +39,10 @@
                     }
                 },
                 "enabled": true,
-                "id": "dda16583-f556-43f3-a1f7-d77d42c4f93f",
+                "id": "80de464d-5e24-486b-8125-41812d6d258d",
                 "ipVersion": "IPV4",
                 "name": "CCDEFAULT.BlockOutboundMailIPv4Secure",
-                "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                 "protocol": "TCP",
                 "ruleType": "DEFAULT_RULE",
                 "source": {
@@ -64,10 +64,10 @@
                     }
                 },
                 "enabled": true,
-                "id": "c1f805a1-bc53-46ed-8703-fb309b9e3e12",
+                "id": "2d72775b-f11a-4818-948e-a81ee562837d",
                 "ipVersion": "IPV6",
                 "name": "CCDEFAULT.BlockOutboundMailIPv6",
-                "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                 "protocol": "TCP",
                 "ruleType": "DEFAULT_RULE",
                 "source": {
@@ -89,10 +89,10 @@
                     }
                 },
                 "enabled": true,
-                "id": "7297ac67-be16-44ba-8bdc-cce05c37935c",
+                "id": "5399f2ff-81a6-4851-a308-94f5bc9050fe",
                 "ipVersion": "IPV6",
                 "name": "CCDEFAULT.BlockOutboundMailIPv6Secure",
-                "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                 "protocol": "TCP",
                 "ruleType": "DEFAULT_RULE",
                 "source": {
@@ -110,11 +110,11 @@
                         "address": "ANY"
                     }
                 },
-                "enabled": false,
-                "id": "d0e084a1-7956-4ec5-8d8a-69e4adb3ae8a",
+                "enabled": true,
+                "id": "d5bb5282-c148-4e40-8a13-3dd7c2b6e5d0",
                 "ipVersion": "IPV6",
                 "name": "CCDEFAULT.DenyExternalInboundIPv6",
-                "networkDomainId": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
                 "protocol": "IP",
                 "ruleType": "DEFAULT_RULE",
                 "source": {
@@ -123,9 +123,259 @@
                     }
                 },
                 "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "10.10.13.0",
+                        "prefixSize": 24
+                    },
+                    "port": {
+                        "begin": 22
+                    }
+                },
+                "enabled": true,
+                "id": "07917ae6-19df-4e8d-9b9d-06cde68514c2",
+                "ipVersion": "IPV4",
+                "name": "test_Rule",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "2607:f480:9901:2265:69d:3cc8:8c37:3467"
+                    },
+                    "port": {
+                        "begin": 80,
+                        "end": 500
+                    }
+                },
+                "enabled": true,
+                "id": "eeb8ccf7-760e-4505-9276-49a1ed970f70",
+                "ipVersion": "IPV6",
+                "name": "http",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "ANY"
+                    },
+                    "port": {
+                        "begin": 3306
+                    }
+                },
+                "enabled": true,
+                "id": "07695130-76d0-49b4-acce-45fe3a43b7ab",
+                "ipVersion": "IPV4",
+                "name": "mysql",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "165.180.38.35"
+                    },
+                    "port": {
+                        "begin": 80
+                    }
+                },
+                "enabled": true,
+                "id": "8a0e0ffc-ef4c-45bc-b9ec-09c2bda59731",
+                "ipVersion": "IPV4",
+                "name": "wordpress",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "2607:f480:9901:2266:2d47:6718:8a7f:2b4e"
+                    },
+                    "port": {
+                        "begin": 80
+                    }
+                },
+                "enabled": true,
+                "id": "3053749f-5d33-4339-b600-91a460e25315",
+                "ipVersion": "IPV6",
+                "name": "Inbound_httpwebapp",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ipAddressList": {
+                        "id": "0a247498-2868-4fc8-bdee-1c74a261a050",
+                        "name": "All_Subnets"
+                    }
+                },
+                "enabled": true,
+                "id": "67aa5674-360d-4a30-b610-38d9ec4d6d23",
+                "ipVersion": "IPV4",
+                "name": "All_Out",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "IP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ipAddressList": {
+                        "id": "0a247498-2868-4fc8-bdee-1c74a261a050",
+                        "name": "All_Subnets"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ipAddressList": {
+                        "id": "0a247498-2868-4fc8-bdee-1c74a261a050",
+                        "name": "All_Subnets"
+                    }
+                },
+                "enabled": true,
+                "id": "a375cec7-22a2-4b14-94f6-b503e418e2ae",
+                "ipVersion": "IPV4",
+                "name": "All_IN",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "IP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ipAddressList": {
+                        "id": "0a247498-2868-4fc8-bdee-1c74a261a050",
+                        "name": "All_Subnets"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "165.180.38.34"
+                    },
+                    "port": {
+                        "begin": 443
+                    }
+                },
+                "enabled": true,
+                "id": "e95ea331-5f6b-4ca2-ae4a-7d6b6c1ebec1",
+                "ipVersion": "IPV4",
+                "name": "Inbound_HTTP",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "165.180.38.34"
+                    },
+                    "port": {
+                        "begin": 80
+                    }
+                },
+                "enabled": true,
+                "id": "fbc62094-6e5b-42d1-a5d8-d50e08217156",
+                "ipVersion": "IPV4",
+                "name": "Inbound_HTTP2",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "165.180.38.35"
+                    },
+                    "port": {
+                        "begin": 443
+                    }
+                },
+                "enabled": true,
+                "id": "52431bc0-544e-449a-9b2b-ae61b0bdff0b",
+                "ipVersion": "IPV4",
+                "name": "Inbound_HTTP1",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "ANY"
+                    }
+                },
+                "state": "NORMAL"
             }
         ],
-        "count": 5
+        "count": 15
     },
     "failed": false
 }

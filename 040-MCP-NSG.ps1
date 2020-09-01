@@ -54,6 +54,7 @@ Write-Host "FireWall Rules Count [ $firewall_count ] "
 foreach ($fw in $firewall_list){
 
   $fw
+  
 
 }
 # # Create an NSG rule to allow HTTP traffic in from the Internet to the front-end subnet.
@@ -62,7 +63,7 @@ foreach ($fw in $firewall_list){
 #   -SourceAddressPrefix Internet -SourcePortRange * `
 #   -DestinationAddressPrefix * -DestinationPortRange 80
 
-# # Create an NSG rule to allow RDP traffic from the Internet to the front-end subnet.
+# # Create an NSG rule to allow RDP traffic from the Internet to the front-end subnet. `
 # $rule2 = New-AzNetworkSecurityRuleConfig -Name 'Allow-RDP-All' -Description "Allow RDP" `
 #   -Access Allow -Protocol Tcp -Direction Inbound -Priority 200 `
 #   -SourceAddressPrefix Internet -SourcePortRange * `
@@ -73,7 +74,7 @@ foreach ($fw in $firewall_list){
 #   -Name 'MyNsg-FrontEnd' -SecurityRules $rule1,$rule2
 
 $nsg_name = $subnet_name + "_nsg"
-$nsg = Get-AzNetworkSecurityGroup -ResourceGroupName $resourcegroup -Name $nsg_name -ErrorAction SilentlyContinue
+#$nsg = Get-AzNetworkSecurityGroup -ResourceGroupName $resourcegroup -Name $nsg_name -ErrorAction SilentlyContinue
 if ($?){
 
 }

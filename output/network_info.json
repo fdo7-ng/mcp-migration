@@ -6,24 +6,24 @@
             {
                 "baselineSnatExclusionConfiguration": true,
                 "baselineStaticRouteConfiguration": true,
-                "createTime": "2020-01-06T20:42:13.000Z",
+                "createTime": "2020-05-13T14:23:28.000Z",
                 "datacenterId": "GEN_SAP1_GEO1_3",
-                "description": "Network Domain for DRS testing on Non-Hana Servers",
-                "id": "d6f0740b-9026-4222-a0a5-f21e37c2a767",
-                "ipv4CpncGatewayAddress": "100.101.49.247",
-                "ipv4InternetGatewayAddress": "100.101.49.241",
-                "ipv6CpncGatewayAddress": "2607:f480:9901:742:0:0:0:7",
-                "ipv6InternetGatewayAddress": "2607:f480:9901:742:0:0:0:1",
-                "name": "SAPDRS_POC",
+                "description": "Network Domain used for the Advance Azure POC",
+                "id": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "ipv4CpncGatewayAddress": "100.101.50.87",
+                "ipv4InternetGatewayAddress": "100.101.50.81",
+                "ipv6CpncGatewayAddress": "2607:f480:9901:748:0:0:0:7",
+                "ipv6InternetGatewayAddress": "2607:f480:9901:748:0:0:0:1",
+                "name": "Advanced_POC",
                 "outsideTransitVlanIpv4Subnet": {
-                    "address": "100.101.49.240",
+                    "address": "100.101.50.80",
                     "prefixSize": 28
                 },
                 "outsideTransitVlanIpv6Subnet": {
-                    "address": "2607:f480:9901:742:0:0:0:0",
+                    "address": "2607:f480:9901:748:0:0:0:0",
                     "prefixSize": 64
                 },
-                "snatIpv4Address": "165.180.34.159",
+                "snatIpv4Address": "165.180.34.165",
                 "state": "NORMAL",
                 "type": "ENTERPRISE"
             }

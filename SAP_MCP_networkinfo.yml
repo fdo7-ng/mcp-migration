@@ -122,18 +122,33 @@
   #     dest: ./output/security_group_vlan.json
   #   delegate_to: localhost
 
-  # - name: List Port Lists
-  #   nttmcp.mcp.port_list_info:
-  #     # auth: "{{auth}}"
-  #     region: "{{ region }}"
-  #     datacenter: "{{ datacenter }}"
-  #     network_domain: '{{ cnd }}'
-  #   register: output
-  # - debug: var=output
-  # - copy:
-  #     content: '{{output | to_nice_json }}'
-  #     dest: ./output/port_list.json
-  #   delegate_to: localhost
+  - name: List Port Lists
+    nttmcp.mcp.port_list_info:
+      # auth: "{{auth}}"
+      region: "{{ region }}"
+      datacenter: "{{ datacenter }}"
+      network_domain: '{{ cnd }}'
+    register: output
+  - debug: var=output
+  - copy:
+      content: '{{output | to_nice_json }}'
+      dest: ./output/port_list.json
+    delegate_to: localhost
+
+  - name: List all IP address lists for a Cloud Network Domain
+    nttmcp.mcp.ip_list_info:
+      # auth: "{{auth}}"
+      region: "{{ region }}"
+      datacenter: "{{ datacenter }}"
+      network_domain: '{{ cnd }}'
+    register: output
+  - debug: var=output
+  - copy:
+      content: '{{output | to_nice_json }}'
+      dest: ./output/ip_list.json
+    delegate_to: localhost
+
+
 
   
   # - name: List static routes

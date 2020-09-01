@@ -1,0 +1,67 @@
+{
+    "changed": false,
+    "data": {
+        "count": 3,
+        "ip_list": [
+            {
+                "childIpAddressList": [],
+                "createTime": "2020-06-04T15:04:30.000Z",
+                "id": "0a247498-2868-4fc8-bdee-1c74a261a050",
+                "ipAddress": [
+                    {
+                        "begin": "10.10.10.0",
+                        "prefixSize": 24
+                    },
+                    {
+                        "begin": "10.10.11.0",
+                        "prefixSize": 24
+                    },
+                    {
+                        "begin": "10.10.12.0",
+                        "prefixSize": 24
+                    },
+                    {
+                        "begin": "10.10.13.0",
+                        "prefixSize": 24
+                    }
+                ],
+                "ipVersion": "IPV4",
+                "name": "All_Subnets",
+                "state": "NORMAL"
+            },
+            {
+                "childIpAddressList": [],
+                "createTime": "2020-09-01T15:26:27.000Z",
+                "description": "google_ip_list",
+                "id": "e9ebc881-71c5-467d-b5dc-3d9382956c6f",
+                "ipAddress": [
+                    {
+                        "begin": "8.8.4.4"
+                    },
+                    {
+                        "begin": "8.8.8.8"
+                    }
+                ],
+                "ipVersion": "IPV4",
+                "name": "google_list",
+                "state": "NORMAL"
+            },
+            {
+                "childIpAddressList": [],
+                "createTime": "2020-09-01T15:32:12.000Z",
+                "description": "test ip range",
+                "id": "ebcfbc91-01d4-415a-8bc6-e69018fe59e9",
+                "ipAddress": [
+                    {
+                        "begin": "192.168.1.100",
+                        "end": "192.168.1.150"
+                    }
+                ],
+                "ipVersion": "IPV4",
+                "name": "iprange_private",
+                "state": "NORMAL"
+            }
+        ]
+    },
+    "failed": false
+}

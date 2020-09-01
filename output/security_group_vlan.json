@@ -1,0 +1,128 @@
+{
+    "changed": false,
+    "data": {
+        "count": 3,
+        "security_group": [
+            {
+                "createTime": "2020-05-14T19:09:14.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "id": "6badee35-a2e3-492d-844d-7942f1a2ffcd",
+                "name": "ProdAPPTierSG_1",
+                "nics": {
+                    "nic": [
+                        {
+                            "id": "5050ec14-9d6b-4d8d-bfc3-3e08f442e537",
+                            "ipv4Address": "10.10.11.7",
+                            "ipv6Address": "2607:f480:9901:2266:432d:c5b8:7db8:e0af",
+                            "primary": true,
+                            "server": {
+                                "id": "3d76f13b-5e6d-4bb8-87ff-3bda72c09dda",
+                                "name": "AppTier02"
+                            }
+                        },
+                        {
+                            "id": "b2072449-929c-4e4b-8833-080bb52724e4",
+                            "ipv4Address": "10.10.11.6",
+                            "ipv6Address": "2607:f480:9901:2266:4769:23e3:8112:782",
+                            "primary": true,
+                            "server": {
+                                "id": "596d7c49-fa45-4205-bf1e-8260a018ac87",
+                                "name": "AppTier01"
+                            }
+                        }
+                    ],
+                    "vlanId": "94aa99f6-a7ff-47a5-af2e-7c8f7f516255"
+                },
+                "state": "NORMAL",
+                "type": "VLAN"
+            },
+            {
+                "createTime": "2020-05-14T19:10:41.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "id": "0df00e9c-a06e-4145-b0c8-be25b3525eed",
+                "name": "PRODDBSG_1",
+                "nics": {
+                    "nic": [
+                        {
+                            "id": "71f924c1-7efa-43f5-9264-d2f30f6bdec3",
+                            "ipv4Address": "10.10.12.10",
+                            "ipv6Address": "2607:f480:9901:2267:501c:8460:8fb:e368",
+                            "primary": false,
+                            "server": {
+                                "id": "596d7c49-fa45-4205-bf1e-8260a018ac87",
+                                "name": "AppTier01"
+                            }
+                        },
+                        {
+                            "id": "898cb41b-746a-48ca-acf0-c076d4bf92bc",
+                            "ipv4Address": "10.10.12.7",
+                            "ipv6Address": "2607:f480:9901:2267:343a:1eb:3deb:913c",
+                            "primary": true,
+                            "server": {
+                                "id": "758dc801-ce5e-406b-ade2-bb2e73a01ea5",
+                                "name": "DBTier02"
+                            }
+                        },
+                        {
+                            "id": "e66d7023-4b9b-44b5-b2be-1e8abcc01b29",
+                            "ipv4Address": "10.10.12.11",
+                            "ipv6Address": "2607:f480:9901:2267:6a5e:3ffc:ecf4:f6ab",
+                            "primary": false,
+                            "server": {
+                                "id": "3d76f13b-5e6d-4bb8-87ff-3bda72c09dda",
+                                "name": "AppTier02"
+                            }
+                        },
+                        {
+                            "id": "f3df4dcd-d295-419b-9d20-cdcdfae5a865",
+                            "ipv4Address": "10.10.12.6",
+                            "ipv6Address": "2607:f480:9901:2267:49d4:c543:4ac9:eb23",
+                            "primary": true,
+                            "server": {
+                                "id": "4341f24b-849a-4214-9cdb-2b555ff4a37b",
+                                "name": "DBTier01"
+                            }
+                        }
+                    ],
+                    "vlanId": "5241031e-4879-4d84-be5a-033bafe010da"
+                },
+                "state": "NORMAL",
+                "type": "VLAN"
+            },
+            {
+                "createTime": "2020-05-14T19:02:58.000Z",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "id": "9bb49319-1f17-4148-b52d-95a8a8e961dd",
+                "name": "ProdWebTierSG_1",
+                "nics": {
+                    "nic": [
+                        {
+                            "id": "038ce9fe-b197-4bb8-9896-af2af9dfd4f9",
+                            "ipv4Address": "10.10.10.6",
+                            "ipv6Address": "2607:f480:9901:2265:69d:3cc8:8c37:3467",
+                            "primary": true,
+                            "server": {
+                                "id": "cc360d6d-4d77-4a82-adf3-3a710e9d5125",
+                                "name": "WebTier01"
+                            }
+                        },
+                        {
+                            "id": "63cf5b69-1837-4388-88db-44f2b7b42992",
+                            "ipv4Address": "10.10.10.7",
+                            "ipv6Address": "2607:f480:9901:2265:f71:3f64:f5b2:30d7",
+                            "primary": true,
+                            "server": {
+                                "id": "a045ebeb-c817-4d21-b29a-37e482d9af74",
+                                "name": "WebTier02"
+                            }
+                        }
+                    ],
+                    "vlanId": "9b70edb2-a05a-467c-8aeb-b55c667a6c50"
+                },
+                "state": "NORMAL",
+                "type": "VLAN"
+            }
+        ]
+    },
+    "failed": false
+}

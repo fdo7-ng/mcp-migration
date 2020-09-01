@@ -129,6 +129,56 @@
                 "datacenterId": "GEN_SAP1_GEO1_3",
                 "destination": {
                     "ip": {
+                        "address": "199.66.69.87"
+                    },
+                    "port": {
+                        "begin": 22
+                    }
+                },
+                "enabled": true,
+                "id": "b3d00343-dbb2-48fc-8186-9ac5efe78d7f",
+                "ipVersion": "IPV4",
+                "name": "Outbound_Public_IP",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "10.10.10.250"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
+                        "address": "10.10.10.250"
+                    },
+                    "port": {
+                        "begin": 22
+                    }
+                },
+                "enabled": true,
+                "id": "19dada91-c6cc-4e7e-be75-5242fe4c3816",
+                "ipVersion": "IPV4",
+                "name": "Inbound_Public_IP",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ip": {
+                        "address": "199.66.69.87"
+                    }
+                },
+                "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ip": {
                         "address": "10.10.13.0",
                         "prefixSize": 24
                     },
@@ -373,9 +423,41 @@
                     }
                 },
                 "state": "NORMAL"
+            },
+            {
+                "action": "ACCEPT_DECISIVELY",
+                "datacenterId": "GEN_SAP1_GEO1_3",
+                "destination": {
+                    "ipAddressList": {
+                        "id": "ebcfbc91-01d4-415a-8bc6-e69018fe59e9",
+                        "name": "iprange_private"
+                    },
+                    "portList": {
+                        "id": "e9cfd97c-fdee-427c-827e-3b01513ef85c",
+                        "name": "single_port"
+                    }
+                },
+                "enabled": false,
+                "id": "1dc9bc45-ca3d-487b-a961-b27b09849b6d",
+                "ipVersion": "IPV4",
+                "name": "testfw_portlist_iprange",
+                "networkDomainId": "bfb35883-94c5-46ac-9c51-17260c01b99f",
+                "protocol": "TCP",
+                "ruleType": "CLIENT_RULE",
+                "source": {
+                    "ipAddressList": {
+                        "id": "e9ebc881-71c5-467d-b5dc-3d9382956c6f",
+                        "name": "google_list"
+                    },
+                    "portList": {
+                        "id": "5160f7fe-8e7a-4660-92dc-ceb9b6eed098",
+                        "name": "port_range1_1"
+                    }
+                },
+                "state": "NORMAL"
             }
         ],
-        "count": 15
+        "count": 18
     },
     "failed": false
 }
